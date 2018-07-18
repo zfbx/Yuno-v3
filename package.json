@@ -1,0 +1,22 @@
+{
+  "name": "yuno",
+  "version": "3.0.0",
+  "description": "my new discord.js bot",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zfbx/Yuno.git"
+  },
+  "author": "zfbx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zfbx/Yuno/issues"
+  },
+  "homepage": "https://github.com/zfbx/Yuno#readme"
+}
