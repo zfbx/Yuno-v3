@@ -39,7 +39,8 @@ prompt.get(schema, function (err, result) {
     var config = {
         'token': result.token,
         'userid': [result.userid],
-        'prefix': result.prefix
+        'prefix': result.prefix,
+        'debugmode': false
     }
 
     var json = JSON.stringify(config, null, 4);
