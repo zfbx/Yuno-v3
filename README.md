@@ -6,4 +6,9 @@ A discord bot built to be modular and easy to expand upon through Javascript usi
 [Command List](https://zfbx.github.io/Yuno/)
 
 
+**Start up**
+`npm install`
+`node ./setup.js`
+`npm run start`
+
 
