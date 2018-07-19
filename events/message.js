@@ -21,9 +21,12 @@ module.exports = (client, message, oldMessage) => {
             msg.edit(`Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms.`);
         });
     }
+    else if (command === 'cmds') {
+        require('../functions/extCmdListGen')("test");
+    }
     else {
         message.channel.send('idk what you mean.');
     }
 
     client.log('Log', args);
-}
+} 
