@@ -21,6 +21,18 @@ Meet Yuno, a discord bot built to be modular and easy to expand upon through Jav
 ## Who Is Yuno?
 Yuno (Yuno Gasai) is base off a character from an Anime called Mirai Nikki (Future Diary). Honestly I just really like the character and thought she'd be a great theme for my discord bot :)
 
+## License
+After much consideration I've decided to go with the GNU GPLv3 License. And to make it simple, here's what that means:
+
+| **Permissions**   | **Conditions**                  | **Limitations** |
+|-------------------|---------------------------------|-----------------|
+|  * Commercial use |  * Disclose source              |  * Liability    |
+| * Distribution    |  * License and copyright notice |  * Warranty     |
+|  * Modification   |  * Same license                 |                 |
+|  * Patent use     |  * State changes                |                 |
+|  * Private use    |                                 |                 |
+
+
 ## Contribute
 1. Make pull requests to the [**Master Branch**](https://github.com/zfbx/Yuno/tree/master).
 2. Keep each pull request to a single feature or fix.
