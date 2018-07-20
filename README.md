@@ -26,11 +26,11 @@ After much consideration I've decided to go with the GNU GPLv3 License. And to m
 
 | **Permissions**   | **Conditions**                  | **Limitations** |
 |-------------------|---------------------------------|-----------------|
-|  * Commercial use |  * Disclose source              |  * Liability    |
-| * Distribution    |  * License and copyright notice |  * Warranty     |
-|  * Modification   |  * Same license                 |                 |
-|  * Patent use     |  * State changes                |                 |
-|  * Private use    |                                 |                 |
+|✔ Commercial use  |👉 Disclose source              |❌Liability       |
+|✔ Distribution    |👉 License and copyright notice |❌Warranty        |
+|✔ Modification    |👉 Same license                 |                   |
+|✔ Patent use      |👉 State changes                |                   |
+|✔ Private use     |                                 |                  |
 
 
 ## Contribute
