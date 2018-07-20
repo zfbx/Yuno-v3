@@ -1,5 +1,4 @@
 const escapeRegex = require('escape-string-regexp');
-const Discord = require('discord.js');
 
 module.exports = (client, message, oldMessage) => {
     // Should the message even be considered?
