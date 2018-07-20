@@ -18,11 +18,23 @@ p {
     margin: 0;
 }
 
+#headerimgholder {
+    margin: auto;
+    text-align: center;
+}
+@media (max-width: 1022px) { 
+    #headerimg {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .commands-list-container {
     font-family: NotoSans, sans-serif;
     margin: 0 auto;
     max-width: 1920px;
     padding: 40px;
+    padding-top: 0;
 }
 .cl-header {
     align-items: center;
@@ -71,7 +83,7 @@ p {
 .commands-header {
     display: grid;
     font-family: NotoSans, sans-serif;
-    grid-template-columns: 22% 39% 39%;
+    grid-template-columns: 22.01% 39% 39%;
 }
 
 .command:nth-child(odd) {
@@ -277,4 +289,9 @@ p {
     margin: 5px 0 5px 10px;
     padding: 5px 7px;
     text-shadow: 1px 1px 2px #010101;
+}
+
+.timestamp {
+    text-align: right;
+    color: #dddddd;
 }
