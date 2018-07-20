@@ -1,4 +1,4 @@
-const fs = require('fs');
+const glob = require('glob');
 const Discord = require('discord.js');
 const client = new Discord.Client({
     disableEveryone: true,
@@ -15,17 +15,18 @@ client.token = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 //Load Commands
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-fs.readdir('./commands/', (err, files) => {
-  if (err) console.error(err);
-  client.log('Loading', `${files.length} commands found.`);
-  files.forEach(f => {
-    let props = require(`./commands/${f}`);
-    client.log('Loading', `Loading Command: ${props.info.name}. `);
-    client.commands.set(props.info.name, props);
-    props.info.aliases.forEach(alias => {
-      client.aliases.set(alias, props.info.name);
+
+glob('commands/*.js', {matchBase:true}, (err, files) => {
+    if (err) console.error(err);
+    client.log('Loading', `${files.length} commands found.`);
+    files.forEach(f => {
+        let props = require(`./${f}`);
+        client.log('Loading', `Loading Command: ${props.info.name}. `);
+        client.commands.set(props.info.name, props);
+        props.info.aliases.forEach(alias => {
+            client.aliases.set(alias, props.info.name);
+        });
     });
-  });
 });
 
 

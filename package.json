@@ -31,7 +31,9 @@
     "discord.js": "github:discordjs/discord.js",
     "erlpack": "github:discordapp/erlpack",
     "escape-string-regexp": "^1.0.5",
+    "glob": "^7.1.2",
     "libsodium-wrappers": "^0.7.3",
+    "moment": "^2.22.2",
     "node-opus": "^0.3.0",
     "prompt": "^1.0.0",
     "zlib-sync": "^0.1.4"

@@ -1,0 +1,13 @@
+exports.run = (client, message, args) => {
+    
+};
+
+exports.info = {
+    name: '',
+    aliases: [],
+    serverOnly: ,
+    description: "",
+    requires: [],
+    usage: [""],
+    module: ""
+};
