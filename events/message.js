@@ -1,9 +1,9 @@
 const escapeRegex = require('escape-string-regexp');
+const Discord = require('discord.js');
 
 module.exports = (client, message, oldMessage) => {
     // Should the message even be considered?
-    if (message.author.bot) return;
-    else if(message.author.id === client.user.id) return;
+    if (message.author.bot || message.system || message.author.id === client.user.id) return;
     if(oldMessage && message.content === oldMessage.content) return;
     // Do they use the prefix or @Mention me?
     const escapedPrefix = escapeRegex(client.config.prefix);
@@ -11,21 +11,18 @@ module.exports = (client, message, oldMessage) => {
     if (!prefixOrMention.test(message.content)) return;
 
     var args = message.content.replace(prefixOrMention, '').split(/ +/g);
-    var command = args[0].toLowerCase();
+    var commandRequest = args[0].toLowerCase();
+    args.shift();
+    //client.log('Debug', args);
 
-    if (command === 'ping') {
-        message.channel.send('Pong...').then(msg => {
-            msg.edit(`Pong! Latency is ${msg.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms.`);
-        });
+
+    var command;
+    if (client.commands.has(commandRequest)) {
+        command = client.commands.get(commandRequest);
+    } else if (client.aliases.has(commandRequest)) {
+        command = client.commands.get(client.aliases.get(commandRequest));
     }
-
-    else if (command === 'cmds') {
-        require('../functions/extCmdListGen')("test");
+    if (command) {
+        command.run(client, message, args);
     }
-
-    else {
-        message.channel.send('idk what you mean.');
-    }
-
-    client.log('Debug', args);
 } 

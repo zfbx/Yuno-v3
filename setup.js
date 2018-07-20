@@ -14,7 +14,7 @@ var schema = {
             replace: '*',
             required: true
         },
-        userid: { //142831624868855808
+        ownerid: { //142831624868855808
             description: 'Your Discord UserID',
             pattern: /^[0-9]{17,19}/,
             type: 'string',
@@ -34,11 +34,11 @@ prompt.start();
 prompt.get(schema, function (err, result) {
     console.log('Config:');
     console.log('  token: ' + '[HIDDEN]');
-    console.log('  userid: ' + result.userid);
+    console.log('  ownerid: ' + result.ownerid);
     console.log('  prefix: ' + result.prefix);
     var config = {
         'token': result.token,
-        'userid': [result.userid],
+        'ownerid': [result.ownerid],
         'prefix': result.prefix,
         'debugmode': false
     }
