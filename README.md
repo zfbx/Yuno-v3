@@ -1,6 +1,6 @@
 [![nadeko2](https://raw.githubusercontent.com/zfbx/Yuno/master/docs/yunoheader.png)](https://zfbx.github.io/Yuno/)
 
-A discord bot built to be modular and easy to expand upon through Javascript using the Discord.js module. My goal with this bot is to hopefully apply most of the commands found on NadekoBot but powered through node.
+Meet Yuno, a discord bot built to be modular and easy to expand upon through Javascript using the Discord.js module.
 
  * Default Prefix: `.` or `@Yuno`
 
@@ -17,5 +17,15 @@ A discord bot built to be modular and easy to expand upon through Javascript usi
 
 ### Stop
 `npm run stop` or <kbd>ctrl</kbd> + <kbd>c</kbd>
+
+## Who Is Yuno?
+Yuno (Yuno Gasai) is base off a character from an Anime called Mirai Nikki (Future Diary). Honestly I just really like the character and thought she'd be a great theme for my discord bot :)
+
+## Contribute
+1. Make pull requests to the [**Master Branch**](https://github.com/zfbx/Yuno/tree/master).
+2. Keep each pull request to a single feature or fix.
+3. Please explain what you did in the PR message.
+
+Thank you so much for your help ^-^
 
 
