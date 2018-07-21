@@ -20,4 +20,25 @@ jQuery(document).ready(function($) {
             $('.command').show();
         }
     });
+    $('#searchbar').keyup(function(){
+        var val = $(this).val().toLowerCase();
+        $('.commands .command').hide();
+        $('.commands .command').each(function(){
+            var text = $(this).html().toLowerCase();
+            if(text.indexOf(val) != -1) {
+                $(this).show();
+            }
+        });
+    });
+    // needed to handle the pressing of the X on the search bar
+    $('#searchbar').on('search', (function(){
+        var val = $(this).val().toLowerCase();
+        $('.commands .command').hide();
+        $('.commands .command').each(function(){
+            var text = $(this).html().toLowerCase();
+            if(text.indexOf(val) != -1) {
+                $(this).show();
+            }
+        });
+    }));
 });

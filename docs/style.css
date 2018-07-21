@@ -37,17 +37,31 @@ p {
     padding-top: 0;
 }
 .cl-header {
-    align-items: center;
+    /*align-items: center;*/
     background: #000;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     padding: 10px 20px;
 }
 .cl-header h2 {
     color: #fff;
     font-weight: 700;
     width: 300px;
+    padding-top: 3px;
+}
+.cl-header h2 > span {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#searchbar {
+    margin-left: auto;
+    width: 240px;
+    background: #333;
+    border: solid #666 1px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 20px;
 }
 
 .module {
