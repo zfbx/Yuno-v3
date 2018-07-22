@@ -40,7 +40,8 @@ prompt.get(schema, function (err, result) {
         'token': result.token,
         'ownerid': [result.ownerid],
         'prefix': result.prefix,
-        'debugmode': false
+        'debugmode': false,
+        'embedcolor': 16755385
     }
 
     var json = JSON.stringify(config, null, 4);

@@ -43,7 +43,7 @@ exports.run = (client, message, args) => {
 
 exports.info = {
     name: 'docs',
-    aliases: ['generate'],
+    aliases: ['generate', 'helpdocs'],
     serverOnly: false,
     description: "Generate help documents",
     requires: ['Owner'],
