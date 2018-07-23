@@ -1,16 +1,22 @@
-const Discord = require('discord.js');
-
 module.exports = (client, message, reqPerms, serverOnly) => {
     if (message.channel.type == 'dm' || message.channel.type == 'group') {
         if (serverOnly) {
             return { run: false, msg: 'This command can only be run in a server.'};
         } else {
-            return { run: true, msg: ''}; //Don't think I need to check permissions here
+            if (reqPerms.includes('BOT_OWNER')) {
+                if (client.config.ownerid.includes(message.author.id)) {
+                    return { run: true, msg: ''};
+                } else {
+                    return { run: false, msg: 'Only bot owners are allowed to run this command.'}; 
+                }
+            } else {
+                return { run: true, msg: ''}; 
+            }
         }
     }
     if (client.config.ownerid.includes(message.author.id) ||
         message.member.hasPermission('ADMINISTRATOR') ||
-        message.member.hasPermission(reqPerms, true, true)) {
+        message.member.hasPermission(reqPerms, true, true)) { //Will this handle 'BOT_OWNER' checks or dismiss it?
         if (message.guild.member(client.user).hasPermission(reqPerms, true)) {
             return {run: true, msg: ''};
         } else {
