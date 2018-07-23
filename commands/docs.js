@@ -20,7 +20,7 @@ exports.run = (client, message, args) => {
         if (cmd.info.requires.length !== 0) {
             cl += `<section class="description-warning"><span>Requires</span><section class="required-permissions">`;
             for (var i = 0; i < cmd.info.requires.length; i++) {
-                cl += `<span class="permission">${cmd.info.requires[i]}</span>`;
+                cl += `<span class="permission">${cmd.info.requires[i].replace(/_/g, ' ')}</span>`;
             }
             cl += `</section></section>`;
         }
@@ -46,7 +46,7 @@ exports.info = {
     aliases: ['generate', 'helpdocs'],
     serverOnly: false,
     description: "Generate help documents",
-    requires: ['Owner'],
+    requires: ['BOT_OWNER'],
     usage: ["docs"],
     module: "Administration"
 };
