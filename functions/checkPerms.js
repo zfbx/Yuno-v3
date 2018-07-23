@@ -1,9 +1,9 @@
-module.exports = (client, message, reqPerms, serverOnly) => {
+module.exports = (client, message, cmd) => {
     if (message.channel.type == 'dm' || message.channel.type == 'group') {
-        if (serverOnly) {
+        if (cmd.serverOnly) {
             return { run: false, msg: 'This command can only be run in a server.'};
         } else {
-            if (reqPerms.includes('BOT_OWNER')) {
+            if (cmd.ownerOnly) {
                 if (client.config.ownerid.includes(message.author.id)) {
                     return { run: true, msg: ''};
                 } else {
@@ -16,13 +16,17 @@ module.exports = (client, message, reqPerms, serverOnly) => {
     }
     if (client.config.ownerid.includes(message.author.id) ||
         message.member.hasPermission('ADMINISTRATOR') ||
-        message.member.hasPermission(reqPerms, true, true)) { //Will this handle 'BOT_OWNER' checks or dismiss it?
-        if (message.guild.member(client.user).hasPermission(reqPerms, true) || reqPerms.includes('BOT_OWNER')) {
+        message.member.hasPermission(cmd.requires, true, true)) {
+        if (message.guild.member(client.user).hasPermission(cmd.botPermissions, true)) {
             return {run: true, msg: ''};
         } else {
-            var botperms = message.guild.member(client.user).missingPermissions(reqPerms, true);
+            var botperms = message.guild.member(client.user).missingPermissions(cmd.botPermissions, true);
             var reply;
-            if (botperms.length > 1) {
+
+            if (botperms.includes('SEND_MESSAGES')) {
+                client.log('ERROR', `Client tried to run command without giving me permissions to reply [user: ${message.user.tag} | Server: ${message.guild.name}]`);
+                return {run: false, msg: ''}
+            }else if (botperms.length > 1) {
                 reply = `I'm missing the following permissions:`;
                 for (i = 0; i < botperms.length; i++) {
                     reply += ` ${botperms[i]},`;
@@ -34,7 +38,7 @@ module.exports = (client, message, reqPerms, serverOnly) => {
             return { run: false, msg: reply };
         }
     } else {
-        var perms = message.member.missingPermissions(reqPerms, true);
+        var perms = message.member.missingPermissions(cmd.requires, true);
         var reply;
         if (perms.length > 1) {
             reply = `I'm sorry, you are missing the following permissions:`;
