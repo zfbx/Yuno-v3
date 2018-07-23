@@ -14,7 +14,6 @@ module.exports = (client, message, oldMessage) => {
     args.shift();
     //client.log('Debug', args);
 
-
     var command;
     if (client.commands.has(commandRequest)) {
         command = client.commands.get(commandRequest);
