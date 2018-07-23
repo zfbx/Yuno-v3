@@ -9,7 +9,7 @@ exports.info = {
     aliases: ['echo'],
     serverOnly: false,
     description: "Have me say something based on what you write",
-    requires: ['Owner'],
+    requires: ['BOT_OWNER'],
     usage: ["say Hi there!"],
     module: "Utility"
 };

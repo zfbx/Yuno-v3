@@ -12,6 +12,7 @@ exports.info = {
     module: ""
 };
 /*
+BOT_OWNER (Custom permission meaning only owners can run)
 ADMINISTRATOR (implicitly has all permissions, and bypasses all channel overwrites)
 CREATE_INSTANT_INVITE (create invitations to the guild)
 KICK_MEMBERS

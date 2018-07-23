@@ -7,7 +7,7 @@ exports.info = {
     aliases: ['h'],
     serverOnly: false,
     description: "Invite the bot to join a server",
-    requires: ['Owner'],
+    requires: ['BOT_OWNER'],
     usage: ["invite"],
     module: "Administration"
 };
