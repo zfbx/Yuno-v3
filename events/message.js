@@ -22,6 +22,13 @@ module.exports = (client, message, oldMessage) => {
         command = client.commands.get(client.aliases.get(commandRequest));
     }
     if (command) {
-        command.run(client, message, args);
+        var info = command.info;
+        var perm = client.checkPerms(client, message, info.requires, info.serverOnly);
+
+        if (perm.run === true) {
+            command.run(client, message, args);
+        } else {
+            message.reply(perm.msg);
+        }
     }
 } 

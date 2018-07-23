@@ -1,57 +1,44 @@
+const Discord = require('discord.js');
 
-module.exports = (client, message, reqPerms) => {
-
+module.exports = (client, message, reqPerms, serverOnly) => {
+    if (message.channel.type == 'dm' || message.channel.type == 'group') {
+        if (serverOnly) {
+            return { run: false, msg: 'This command can only be run in a server.'};
+        } else {
+            return { run: true, msg: ''}; //Don't think I need to check permissions here
+        }
+    }
     if (client.config.ownerid.includes(message.author.id) ||
         message.member.hasPermission('ADMINISTRATOR') ||
-        message.member.hasPermission(reqPerms)) {
-            
-            return {run: true, msg = ''};
+        message.member.hasPermission(reqPerms, true, true)) {
+        if (message.guild.member(client.user).hasPermission(reqPerms, true)) {
+            return {run: true, msg: ''};
+        } else {
+            var botperms = message.guild.member(client.user).missingPermissions(reqPerms, true);
+            var reply;
+            if (botperms.length > 1) {
+                reply = `I'm missing the following permissions:`;
+                for (i = 0; i < botperms.length; i++) {
+                    reply += ` ${botperms[i]},`;
+                }
+                reply = reply.slice(0, -1) + '.';
+            } else {
+                reply = `I'm missing the following permission: ${botperms[0]}.`;
+            }
+            return { run: false, message: reply };
+        }
+    } else {
+        var perms = message.member.missingPermissions(reqPerms, true);
+        var reply;
+        if (perms.length > 1) {
+            reply = `I'm sorry, you are missing the following permissions:`;
+            for (i = 0; i < perms.length; i++) {
+                reply += ` ${perms[i]},`;
+            }
+            reply = reply.slice(0, -1) + '.';
+        } else {
+            reply = `I'm sorry you're missing the following permission: ${perms[0]}.`;
+        }
+        return { run: false, message: reply };
     }
-
-    //if DM - allow
-
-    //if Administrator - allow
-    //message.member.hasPermission('ADMINISTRATOR');
-
-
-    //check each permission
-    //message.member.hasPermission('KICK_MEMBERS');
-
-
-
-    //check if bot has permissions to run the command
-    //if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('I do not have the correct permissions.').catch(console.error);
-
-
 };
-
-/*
-ADMINISTRATOR (implicitly has all permissions, and bypasses all channel overwrites)
-CREATE_INSTANT_INVITE (create invitations to the guild)
-KICK_MEMBERS
-BAN_MEMBERS
-MANAGE_CHANNELS (edit and reorder channels)
-MANAGE_GUILD (edit the guild information, region, etc.)
-ADD_REACTIONS (add new reactions to messages)
-VIEW_AUDIT_LOG
-VIEW_CHANNEL
-SEND_MESSAGES
-SEND_TTS_MESSAGES
-MANAGE_MESSAGES (delete messages and reactions)
-EMBED_LINKS (links posted will have a preview embedded)
-ATTACH_FILES
-READ_MESSAGE_HISTORY (view messages that were posted prior to opening Discord)
-MENTION_EVERYONE
-USE_EXTERNAL_EMOJIS (use emojis from different guilds)
-CONNECT (connect to a voice channel)
-SPEAK (speak in a voice channel)
-MUTE_MEMBERS (mute members across all voice channels)
-DEAFEN_MEMBERS (deafen members across all voice channels)
-MOVE_MEMBERS (move members between voice channels)
-USE_VAD (use voice activity detection)
-CHANGE_NICKNAME
-MANAGE_NICKNAMES (change other members' nicknames)
-MANAGE_ROLES
-MANAGE_WEBHOOKS
-MANAGE_EMOJIS
-*/

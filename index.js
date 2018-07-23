@@ -10,6 +10,7 @@ const client = new Discord.Client({
 client.config = require('./config.json');
 client.version = require('./package.json').version;
 client.log = require('./functions/log.js');
+client.checkPerms = require('./functions/checkPerms.js');
 client.token = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 
 //Load Commands
