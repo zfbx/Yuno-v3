@@ -17,7 +17,7 @@ module.exports = (client, message, reqPerms, serverOnly) => {
     if (client.config.ownerid.includes(message.author.id) ||
         message.member.hasPermission('ADMINISTRATOR') ||
         message.member.hasPermission(reqPerms, true, true)) { //Will this handle 'BOT_OWNER' checks or dismiss it?
-        if (message.guild.member(client.user).hasPermission(reqPerms, true)) {
+        if (message.guild.member(client.user).hasPermission(reqPerms, true) || reqPerms.includes('BOT_OWNER')) {
             return {run: true, msg: ''};
         } else {
             var botperms = message.guild.member(client.user).missingPermissions(reqPerms, true);
@@ -31,7 +31,7 @@ module.exports = (client, message, reqPerms, serverOnly) => {
             } else {
                 reply = `I'm missing the following permission: ${botperms[0]}.`;
             }
-            return { run: false, message: reply };
+            return { run: false, msg: reply };
         }
     } else {
         var perms = message.member.missingPermissions(reqPerms, true);
@@ -45,6 +45,6 @@ module.exports = (client, message, reqPerms, serverOnly) => {
         } else {
             reply = `I'm sorry you're missing the following permission: ${perms[0]}.`;
         }
-        return { run: false, message: reply };
+        return { run: false, msg: reply };
     }
 };
