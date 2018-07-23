@@ -7,9 +7,11 @@ exports.run = (client, message, args) => {
 exports.info = {
     name: 'say',
     aliases: ['echo'],
-    serverOnly: false,
-    description: "Have me say something based on what you write",
-    requires: ['BOT_OWNER'],
     usage: ["say Hi there!"],
-    module: "Utility"
+    module: "Utility",
+    serverOnly: false,
+    ownerOnly: true,
+    requires: [''],
+    botPermissions: ['SEND_MESSAGES'],
+    description: "Have me say something based on what you write"
 };

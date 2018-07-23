@@ -5,14 +5,16 @@ exports.run = (client, message, args) => {
 exports.info = {
     name: '',
     aliases: [],
-    serverOnly: ,
-    description: "",
-    requires: [],
     usage: [""],
-    module: ""
+    module: "",
+    serverOnly: false,
+    ownerOnly: false,
+    requires: [],
+    botPermissions: ['SEND_MESSAGES'],
+    description: ""
 };
-/*
-BOT_OWNER (Custom permission meaning only owners can run)
+
+/* --Permissions --
 ADMINISTRATOR (implicitly has all permissions, and bypasses all channel overwrites)
 CREATE_INSTANT_INVITE (create invitations to the guild)
 KICK_MEMBERS
@@ -41,4 +43,19 @@ MANAGE_NICKNAMES (change other members' nicknames)
 MANAGE_ROLES
 MANAGE_WEBHOOKS
 MANAGE_EMOJIS
+*/
+
+/* --Modules--
+Administration
+CustomReactions
+Gambling
+Games
+Help
+Music
+NSFW
+Permissions
+Pokemon
+Searches
+Utility
+Xp
 */

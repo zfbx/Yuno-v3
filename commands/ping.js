@@ -6,10 +6,12 @@ exports.run = (client, message, args) => {
 
 exports.info = {
     name: 'ping',
-    aliases: ['pong'],
-    serverOnly: false,
-    description: "Simply test the ping responce time to the bot",
-    requires: [],
+    aliases: [''],
     usage: ["ping"],
-    module: "Utility"
+    module: "Utility",
+    serverOnly: false,
+    ownerOnly: false,
+    requires: [],
+    botPermissions: ['SEND_MESSAGES'],
+    description: "Simple ping request/response time test for bot"
 };

@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
         }
         cl += `</div><div class="usage"><span class="cell-parts">`;
         for (var i = 0; i < cmd.info.usage.length; i++) {
-            cl += `<span class="cell-part">${cmd.info.usage[i]}</span>`;
+            cl += `<span class="cell-part">${pre}${cmd.info.usage[i]}</span>`;
         }
         cl += `</span></div></div>`;
         console.log(`Added Command #${num}`);
@@ -44,9 +44,11 @@ exports.run = (client, message, args) => {
 exports.info = {
     name: 'docs',
     aliases: ['generate', 'helpdocs'],
-    serverOnly: false,
-    description: "Generate help documents",
-    requires: ['BOT_OWNER'],
     usage: ["docs"],
-    module: "Administration"
+    module: "Administration",
+    serverOnly: false,
+    ownerOnly: true,
+    requires: [''],
+    botPermissions: ['SEND_MESSAGES'],
+    description: "Generate help documents"
 };

@@ -1,3 +1,4 @@
+//TODO: Output commands based on user's permissions? or just nix Owner commands?
 exports.run = (client, message, args) => {
     if (!args[0]) {
         const commandNames = Array.from(client.commands.keys());
@@ -18,9 +19,11 @@ exports.run = (client, message, args) => {
 exports.info = {
     name: 'help',
     aliases: ['h'],
-    serverOnly: false,
-    description: "Pretty self explanitory don't you think?",
-    requires: [],
     usage: ["help", "help ping"],
-    module: "Utility"
+    module: "Utility",
+    serverOnly: false,
+    ownerOnly: false,
+    requires: [],
+    botPermissions: ['SEND_MESSAGES'],
+    description: "Pretty self explanitory don't you think?"
 };

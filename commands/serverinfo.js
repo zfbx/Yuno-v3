@@ -12,11 +12,13 @@ exports.run = (client, message, args) => {
 };
 
 exports.info = {
-    name: 'info',
-    aliases: [],
+    name: 'serverinfo',
+    aliases: ['sinfo', 'server'],
+    usage: ["serverinfo"],
+    module: "Utility",
     serverOnly: true,
-    description: "Get information about the server you're in.",
+    ownerOnly: false,
     requires: [],
-    usage: ["info"],
-    module: "Utility"
+    botPermissions: ['SEND_MESSAGES'],
+    description: "Get information about the server you're in."
 };
