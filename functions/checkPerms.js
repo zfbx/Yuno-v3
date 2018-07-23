@@ -1,7 +1,12 @@
 
 module.exports = (client, message, reqPerms) => {
 
-    if (client.config.ownerid.includes(message.author.id)) return {run: true, msg = ''};
+    if (client.config.ownerid.includes(message.author.id) ||
+        message.member.hasPermission('ADMINISTRATOR') ||
+        message.member.hasPermission(reqPerms)) {
+            
+            return {run: true, msg = ''};
+    }
 
     //if DM - allow
 
