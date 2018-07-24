@@ -20,7 +20,7 @@ exports.info = {
     name: 'help',
     aliases: ['h'],
     usage: ["help", "help ping"],
-    module: "Utility",
+    module: "Help",
     serverOnly: false,
     ownerOnly: false,
     requires: [],
