@@ -11,7 +11,7 @@ exports.info = {
     module: "Utility",
     serverOnly: false,
     ownerOnly: true,
-    requires: [''],
+    requires: [],
     botPermissions: ['SEND_MESSAGES'],
     description: "Have me say something based on what you write"
 };

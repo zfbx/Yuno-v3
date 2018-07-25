@@ -17,10 +17,15 @@ exports.run = (client, message, args) => {
         }
         cl += `<span class="module ${cmd.info.module.toLocaleLowerCase()}">${cmd.info.module}<span></div>
             <div class="description"><section>${cmd.info.description}</section>`;
-        if (cmd.info.requires.length !== 0) {
+        if (cmd.info.requires.length !== 0 || cmd.info.ownerOnly) {
             cl += `<section class="description-warning"><span>Requires</span><section class="required-permissions">`;
-            for (var i = 0; i < cmd.info.requires.length; i++) {
-                cl += `<span class="permission">${cmd.info.requires[i].replace(/_/g, ' ')}</span>`;
+            if (cmd.info.ownerOnly) {
+                cl += `<span class="permission">BOT OWNER</span>`;
+            }
+            if (cmd.info.requires.length !== 0){
+                for (var i = 0; i < cmd.info.requires.length; i++) {
+                    cl += `<span class="permission">${cmd.info.requires[i].replace(/_/g, ' ')}</span>`;
+                }
             }
             cl += `</section></section>`;
         }
@@ -48,7 +53,7 @@ exports.info = {
     module: "Administration",
     serverOnly: false,
     ownerOnly: true,
-    requires: [''],
+    requires: [],
     botPermissions: ['SEND_MESSAGES'],
     description: "Generate help documents"
 };

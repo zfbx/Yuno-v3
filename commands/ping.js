@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
 
 exports.info = {
     name: 'ping',
-    aliases: [''],
+    aliases: [],
     usage: ["ping"],
     module: "Utility",
     serverOnly: false,

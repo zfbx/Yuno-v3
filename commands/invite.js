@@ -4,12 +4,12 @@ exports.run = (client, message, args) => {
 
 exports.info = {
     name: 'invite',
-    aliases: ['h'],
+    aliases: [],
     usage: ["invite"],
     module: "Administration",
     serverOnly: false,
     ownerOnly: true,
-    requires: [''],
+    requires: [],
     botPermissions: ['SEND_MESSAGES'],
     description: "Invite the bot to join a server"
 };
