@@ -1,6 +1,6 @@
 {
     "Madam Chuckle" : {
-        "__comment" : "[Ignore comment] Up to date as of Tuesday, July 24th, 2018",
+        "__comment" : "[Ignore comment] Up to date as of Tuesday, July 24th, 2018 | Ref: http://toontownrewritten.wikia.com/wiki/SOS_Toons",
         "rating" : "3 Stars",
         "ability" : "Heal",
         "track" : "Toon-Up",
@@ -236,7 +236,7 @@
     },
     "Flim Flam" : {
         "rating" : "3 Stars",
-        "ability" : "",
+        "ability" : "Cogs Miss",
         "track" : "--",
         "gag" : "Pixie Dust",
         "Stats" : "Decreases the accuracy of all attacks to none for one round",
@@ -245,7 +245,7 @@
     },
     "Mr. Freeze" : {
         "rating" : "4 Stars",
-        "ability" : "",
+        "ability" : "Cogs Miss",
         "track" : "--",
         "gag" : "Pixie Dust",
         "Stats" : "Decreases the accuracy of all attacks to none for 2 rounds",
@@ -254,7 +254,7 @@
     },
     "Julius Wheezer" : {
         "rating" : "5 Stars",
-        "ability" : "",
+        "ability" : "Cogs Miss",
         "track" : "--",
         "gag" : "Pixie Dust",
         "Stats" : "Decreases the accuracy of all attacks to none for 3 rounds",
