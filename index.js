@@ -11,7 +11,6 @@ client.config = require('./config.json');
 client.log = require('./functions/log.js');
 client.checkPerms = require('./functions/checkPerms.js');
 client.token = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
-
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
@@ -28,13 +27,16 @@ glob('commands/*.js', {matchBase:true}, (err, files) => {
     });
 });
 
-
-
 client.on('ready', () => require('./events/ready.js')(client));
 client.on('message', message => require('./events/message.js')(client, message));
 client.on('messageUpdate', (oldMessage, newMessage) => require('./events/message.js')(client, newMessage, oldMessage));
 client.on('guildCreate', guild => require('./events/guildCreate.js')(client, guild));
 client.on('guildMemberAdd', member => require('./events/guildMemberAdd.js')(client, member));
+client.on('guildMemberRemove', member => require('./events/guildMemberRemove.js')(client, member));
+client.on('guildBanAdd', (guild, user) => require('./events/guildBanAdd.js')(client, guild, user));
+client.on('guildBanRemove', (guild, user) => require('./events/guildBanRemove.js')(client, guild, user));
+client.on('disconnect', () => require('./events/disconnect.js')(client));
+client.on('reconnecting', () => require('./events/reconnecting.js')(client));
 client.on('warn', warn => console.warn(warn.replace(client.token, '[TOKEN-HERE]')));
 client.on('error', err => console.error(err.replace(client.token, '[TOKEN-HERE]')));
 
