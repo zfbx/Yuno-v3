@@ -14,7 +14,7 @@ client.token = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
-glob('commands/*.js', {matchBase:true}, (err, files) => {
+glob('commands/**/*.js', {recursive: true}, (err, files) => {
     if (err) console.error(err);
     client.log('Loading', `${files.length} commands found.`);
     files.forEach(f => {
@@ -37,7 +37,7 @@ client.on('guildBanAdd', (guild, user) => require('./events/guildBanAdd.js')(cli
 client.on('guildBanRemove', (guild, user) => require('./events/guildBanRemove.js')(client, guild, user));
 client.on('disconnect', () => require('./events/disconnect.js')(client));
 client.on('reconnecting', () => require('./events/reconnecting.js')(client));
-client.on('warn', warn => console.warn(warn.replace(client.token, '[TOKEN-HERE]')));
-client.on('error', err => console.error(err.replace(client.token, '[TOKEN-HERE]')));
+client.on('warn', warn => require('./events/warn.js')(client, warn));
+client.on('error', err => require('./events/error.js')(client, err));
 
 client.login(client.config.token);

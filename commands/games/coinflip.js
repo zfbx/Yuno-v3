@@ -1,4 +1,4 @@
-const rand = require('../functions/random.js');
+const rand = require('../../functions/random.js');
 
 exports.run = (client, message, args) => {
     var side = (rand(0, 1)) ? "Heads" : "Tails"; //1 is heads

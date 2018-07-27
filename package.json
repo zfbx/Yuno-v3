@@ -38,6 +38,7 @@
     "glob": "^7.1.2",
     "libsodium-wrappers": "^0.7.3",
     "moment": "^2.22.2",
+    "node-fetch": "^2.2.0",
     "node-opus": "^0.3.0",
     "prompt": "^1.0.0",
     "zlib-sync": "^0.1.4"
