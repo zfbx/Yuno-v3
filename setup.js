@@ -39,6 +39,7 @@ prompt.get(schema, function (err, result) {
     var config = {
         'token': result.token,
         'ownerid': [result.ownerid],
+        'ownerlogging': true,
         'prefix': result.prefix,
         'debugmode': false,
         'embedcolor': 16755385
