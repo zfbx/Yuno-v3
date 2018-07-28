@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
 exports.info = {
     name: 'serverinfo',
     aliases: ['sinfo', 'server'],
-    usage: ["serverinfo"],
+    usage: ['serverinfo'],
     module: "Utility",
     serverOnly: true,
     ownerOnly: false,
