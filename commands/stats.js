@@ -30,12 +30,12 @@ exports.run = (client, message, args) => {
 
 exports.info = {
     name: 'stats',
-    aliases: ['stat', 'version', 'v'],
-    usage: ["stats"],
+    aliases: ['version', 'v'],
+    usage: ['stats'],
     module: "Utility",
     serverOnly: false,
     ownerOnly: false,
     requires: [],
     botPermissions: ['SEND_MESSAGES'],
-    description: "Get bot server stats."
+    description: "Get important bot based information."
 };
