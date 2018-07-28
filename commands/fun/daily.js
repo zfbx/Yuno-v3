@@ -50,7 +50,7 @@ exports.info = {
     name: "daily",
     aliases: ['dailies'],
     usage: ['daily'],
-    module: "Fun",
+    module: "Xp",
     serverOnly: false,
     ownerOnly: false,
     requires: [],
