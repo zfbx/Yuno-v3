@@ -1,6 +1,13 @@
 exports.run = async (client, message, args) => {
-        var total = args.reduce((prev, arg) => prev - parseFloat(arg), 0);
-		return message.reply(`${args.join(' - ')} = **${total}**`);
+    var difference = 0;
+    for (i = 0; i < args.length; i++) {
+        if (i == 0) {
+            difference = args[i];
+        } else {
+            difference = parseFloat(difference) - parseFloat(args[i]);
+        }
+    }
+    return message.channel.send(`${args.join(' - ')} = **${difference}**`);
 };
 
 exports.info = {
