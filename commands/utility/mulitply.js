@@ -1,5 +1,4 @@
 exports.run = async (client, message, args) => {
-    console.log(args);
     var product = 0;
     for (i = 0; i < args.length; i++) {
         if (i == 0) {
