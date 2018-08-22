@@ -8,7 +8,7 @@ exports.info = {
     name: 'say',
     aliases: ['echo'],
     usage: ["say Hi there!"],
-    module: "Utility",
+    module: "Owner",
     serverOnly: false,
     ownerOnly: true,
     requires: [],
