@@ -19,7 +19,7 @@ glob('commands/**/*.js', {recursive: true}, (err, files) => {
     client.log('Loading', `${files.length} commands found.`);
     files.forEach(f => {
         let props = require(`./${f}`);
-        client.log('Loading', `Loading Command: ${props.info.name}. `);
+        //client.log('Loading', `Loading Command: ${props.info.name}. `);
         client.commands.set(props.info.name, props);
         props.info.aliases.forEach(alias => {
             client.aliases.set(alias, props.info.name);

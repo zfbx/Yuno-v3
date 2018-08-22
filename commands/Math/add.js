@@ -7,7 +7,7 @@ exports.info = {
     name: 'add',
     aliases: ['addition', 'sum'],
     usage: ["add 4 56 76"],
-    module: "Utility",
+    module: "Math",
     serverOnly: false,
     ownerOnly: false,
     requires: [],

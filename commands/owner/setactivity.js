@@ -23,7 +23,7 @@ exports.info = {
     name: 'setactivity',
     aliases: ['game', 'setgame'],
     usage: ["setactivity PLAYING Minecraft", "setactivity STREAMING https://twitch.tv/zfbx Grand Theft Auto V"],
-    module: "Administration",
+    module: "Owner",
     serverOnly: false,
     ownerOnly: true,
     requires: [],

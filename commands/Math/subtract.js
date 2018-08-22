@@ -14,7 +14,7 @@ exports.info = {
     name: 'subtract',
     aliases: ['difference'],
     usage: ["subtract 100 26"],
-    module: "Utility",
+    module: "Math",
     serverOnly: false,
     ownerOnly: false,
     requires: [],

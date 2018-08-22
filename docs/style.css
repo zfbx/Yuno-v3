@@ -169,43 +169,43 @@ p {
     background: #009bbf;
 }
 
-.module-name.customreactions {
+.module-name.fun {
     background: rgba(0, 91, 211, .3);
     border: 1px solid #005bd3;
 }
 
-.customreactions,
-.customreactions.selected {
+.fun,
+.fun.selected {
     background: #005bd3;
 }
 
-.module-name.gambling {
+.module-name.games {
     background: rgba(45, 41, 170, .3);
     border: 1px solid #2d29aa;
 }
 
-.gambling,
-.gambling.selected {
+.games,
+.games.selected {
     background: #2d29aa;
 }
 
-.module-name.games {
+.module-name.help {
     background: rgba(108, 33, 174, .3);
     border: 1px solid #6c21ae;
 }
 
-.games,
-.games.selected {
+.help,
+.help.selected {
     background: #6c21ae;
 }
 
-.module-name.help {
+.module-name.math {
     background: rgba(151, 45, 182, .3);
     border: 1px solid #972db6;
 }
 
-.help,
-.help.selected {
+.math,
+.math.selected {
     background: #972db6;
 }
 
@@ -229,33 +229,23 @@ p {
     background: #d12834;
 }
 
-.module-name.permissions {
+.module-name.owner {
     background: rgba(211, 104, 24, .3);
     border: 1px solid #d36818;
 }
 
-.permissions,
-.permissions.selected {
+.owner,
+.owner.selected {
     background: #d36818;
 }
 
-.module-name.pokemon {
-    background: rgba(211, 168, 14, .3);
-    border: 1px solid #d3a80e;
-}
-
-.pokemon,
-.pokemon.selected {
-    background: #d3a80e;
-}
-
-.module-name.searches {
+.module-name.search {
     background: rgba(158, 197, 0, .3);
     border: 1px solid #9ec500;
 }
 
-.searches,
-.searches.selected {
+.search,
+.search.selected {
     background: #9ec500;
 }
 

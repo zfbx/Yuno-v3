@@ -1,4 +1,4 @@
-const rand = require('../functions/random.js');
+const rand = require('../../functions/random.js');
 
 exports.run = async (client, message, args) => {
     if (args[0] && args[1]) {

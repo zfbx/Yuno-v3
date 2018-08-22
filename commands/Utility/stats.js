@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 const moment = require('moment');
 
 exports.run = async (client, message, args) => {

@@ -34,9 +34,10 @@ exports.run = async (client, message, args) => {
             cl += `<span class="cell-part">${pre}${cmd.info.usage[i]}</span>`;
         }
         cl += `</span></div></div>`;
-        console.log(`Added Command #${num}`);
+        //console.log(`Added Command #${num}`);
         num++;
     });
+    client.log("CMD-GEN", `Added ${num - 1} commands.`); //originally for logging for loop adds extra
     client.log("CMD-GEN", "Saving New Command List..");
     template = template.replace(/{{COMMANDS}}/, cl).replace(/{{timestamp}}/, moment().format('MMMM Do YYYY, h:mm:ss a'));
     fs.writeFileSync('./docs/index.html', template, function (err) {
@@ -50,7 +51,7 @@ exports.info = {
     name: 'docs',
     aliases: ['generate', 'helpdocs'],
     usage: ["docs"],
-    module: "Administration",
+    module: "Owner",
     serverOnly: false,
     ownerOnly: true,
     requires: [],

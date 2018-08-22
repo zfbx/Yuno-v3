@@ -26,7 +26,7 @@ exports.info = {
     name: 'listen',
     aliases: [],
     usage: ["listen"],
-    module: "CustomReactions",
+    module: "Fun",
     serverOnly: false,
     ownerOnly: false,
     requires: [],

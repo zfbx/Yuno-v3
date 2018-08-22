@@ -74,7 +74,7 @@ exports.info = {
     name: 'anime',
     aliases: [],
     usage: ["anime Boku no Hero Academia", "anime 10087"],
-    module: "Searches",
+    module: "Search",
     serverOnly: false,
     ownerOnly: false,
     requires: [],

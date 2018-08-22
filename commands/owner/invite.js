@@ -6,7 +6,7 @@ exports.info = {
     name: 'invite',
     aliases: [],
     usage: ["invite"],
-    module: "Administration",
+    module: "Owner",
     serverOnly: false,
     ownerOnly: true,
     requires: [],
