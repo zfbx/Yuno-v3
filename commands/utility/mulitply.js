@@ -1,6 +1,14 @@
 exports.run = async (client, message, args) => {
-        var total = args.reduce((prev, arg) => prev * parseFloat(arg), 0);
-		return message.reply(`${args.join(' * ')} = **${total}**`);
+    console.log(args);
+    var product = 0;
+    for (i = 0; i < args.length; i++) {
+        if (i == 0) {
+            product = args[i];
+        } else {
+            product = parseFloat(product) * parseFloat(args[i]);
+        }
+    }
+    return message.channel.send(`${args.join(' * ')} = **${product}**`);
 };
 
 exports.info = {
