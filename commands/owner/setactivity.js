@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     if (!args[0]) {
         client.user.setActivity('')
         return message.channel.send('Activity set to none');

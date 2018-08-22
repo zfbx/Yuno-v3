@@ -1,7 +1,7 @@
 const fs = require('fs');
 const moment = require('moment');
      
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     //if (message.author.id != client.config.ownerid) return;
     var now = Date.now();
     message.channel.send('Generating Documents.');

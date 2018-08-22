@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     
     // Storing it in a separate .graphql/.gql file is also possible
     var query = `

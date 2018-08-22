@@ -3,7 +3,7 @@ const pkg = require('../../package.json');
 const moment = require('moment');
 const os = require('os');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     var cpus = os.cpus();
     var cpumsg = `**Model:** ${cpus[0].model}\n`;
     var cpuusage = 0, cpufree = 0;

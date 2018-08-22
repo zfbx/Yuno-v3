@@ -1,7 +1,7 @@
 const rand = require('../../functions/random.js');
 const pkg = require('../../package.json');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
 
     var date = new Date();
     var name = message.author.username;

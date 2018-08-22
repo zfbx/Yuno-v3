@@ -1,7 +1,7 @@
 const rand = require('../../functions/random.js');
 const fetch = require('node-fetch');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
 
     if(!message.channel.nsfw || !message.channel.type == 'dm') {
         return message.channel.send('I\'m sorry, This command is not permitted in this channel.');

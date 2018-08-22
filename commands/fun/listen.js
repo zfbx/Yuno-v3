@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => { //Should this have a global cooldown considering it's 6 messages within 3 seconds?
+exports.run = async (client, message, args) => { //Should this have a global cooldown considering it's 6 messages within 3 seconds?
     message.channel.send('**L**').then(msg => {
         setTimeout(function(){ 
             msg.edit(`**L I**`).then(msg => {

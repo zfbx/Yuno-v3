@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     if (message.author.id != client.config.ownerid) return;
     message.channel.send(args.join(' '));
     message.delete();

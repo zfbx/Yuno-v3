@@ -1,6 +1,6 @@
 const rand = require('../functions/random.js');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     if (args[0] && args[1]) {
         if (parseInt(args[0]) < parseInt(args[1])) {
             return message.channel.send(`Your random number between ${args[0]} and ${args[1]} is: ${rand(parseInt(args[0]), parseInt(args[1]))}`);

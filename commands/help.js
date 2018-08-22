@@ -1,5 +1,5 @@
 //TODO: Output commands based on user's permissions? or just nix Owner commands?
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     if (!args[0]) {
         const commandNames = Array.from(client.commands.keys());
         const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);

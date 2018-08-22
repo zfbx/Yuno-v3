@@ -1,6 +1,6 @@
 const rand = require('../../functions/random.js');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     var side = (rand(0, 1)) ? "Heads" : "Tails"; //1 is heads
     if (args[0]) {
         var guess;

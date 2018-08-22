@@ -1,4 +1,4 @@
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
         var total = args.reduce((prev, arg) => prev * parseFloat(arg), 0);
 		return message.reply(`${args.join(' * ')} = **${total}**`);
 };

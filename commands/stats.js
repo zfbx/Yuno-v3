@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const pkg = require('../package.json');
 const moment = require('moment');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
         .setDescription(`status and info`)
         .setColor(client.config.embedcolor)

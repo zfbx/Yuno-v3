@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
     const embed = new Discord.MessageEmbed()
         .setDescription(`${message.guild.name}'s Information and Details`)
         .setThumbnail(message.guild.iconURL())
