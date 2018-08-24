@@ -18,6 +18,11 @@ module.exports = (client, message, cmd) => {
         message.member.hasPermission('ADMINISTRATOR') ||
         message.member.hasPermission(cmd.requires, true, true)) {
         if (message.guild.member(client.user).hasPermission(cmd.botPermissions, true)) {
+            if (cmd.nsfw) {
+                if(!message.channel.nsfw) {
+                    return { run: false, msg: 'I\'m sorry, This command is nsfw and not permitted in this channel.'};
+                } //else continue
+            } //else continue
             return {run: true, msg: ''};
         } else {
             var botperms = message.guild.member(client.user).missingPermissions(cmd.botPermissions, true);
