@@ -24,7 +24,12 @@ module.exports = (client, message, oldMessage) => {
         var perm = client.checkPerms(client, message, command.info);
 
         if (perm.run === true) {
-            command.run(client, message, args);
+            try {
+                command.run(client, message, args);
+            } catch (e) {
+                message.reply('Something went horribly wrong..');
+            }
+            
         } else {
             if (perm.msg !== '') {
                 message.reply(perm.msg);
