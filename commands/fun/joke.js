@@ -10,6 +10,7 @@ exports.info = {
     aliases: [],
     usage: ['joke'],
     module: "Fun",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

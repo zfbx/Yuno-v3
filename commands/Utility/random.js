@@ -17,6 +17,7 @@ exports.info = {
     aliases: ['rand'],
     usage: ["random 1 100"],
     module: "Utility",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

@@ -3,9 +3,6 @@ const fetch = require('node-fetch');
 
 exports.run = async (client, message, args) => {
 
-    if(!message.channel.nsfw || !message.channel.type == 'dm') {
-        return message.channel.send('I\'m sorry, This command is not permitted in this channel.');
-    }
     var url = `http://api.oboobs.ru/boobs/${rand(0, 10330)}`;
 
     fetch(url)
@@ -25,6 +22,7 @@ exports.info = {
     aliases: ['boob'],
     usage: ["boobs"],
     module: "NSFW",
+    nsfw: true,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

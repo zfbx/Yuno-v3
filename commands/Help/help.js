@@ -21,6 +21,7 @@ exports.info = {
     aliases: ['h'],
     usage: ["help", "help ping"],
     module: "Help",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

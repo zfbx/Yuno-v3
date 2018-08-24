@@ -8,6 +8,7 @@ exports.info = {
     aliases: ['addition', 'sum'],
     usage: ["add 4 56 76"],
     module: "Math",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

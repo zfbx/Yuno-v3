@@ -7,6 +7,7 @@ exports.info = {
     aliases: [],
     usage: [""],
     module: "",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],
@@ -47,15 +48,14 @@ MANAGE_EMOJIS
 
 /* --Modules--
 Administration
-CustomReactions
-Gambling
+Fun
 Games
 Help
+Math
 Music
 NSFW
-Permissions
-Pokemon
-Searches
+Owner
+Search
 Utility
-Xp
+XP
 */

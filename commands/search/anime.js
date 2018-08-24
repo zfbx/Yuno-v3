@@ -75,6 +75,7 @@ exports.info = {
     aliases: [],
     usage: ["anime Boku no Hero Academia", "anime 10087"],
     module: "Search",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

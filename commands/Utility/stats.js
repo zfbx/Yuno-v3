@@ -33,6 +33,7 @@ exports.info = {
     aliases: ['version', 'v'],
     usage: ['stats'],
     module: "Utility",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

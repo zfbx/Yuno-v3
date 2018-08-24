@@ -27,6 +27,7 @@ exports.info = {
     aliases: ['flipcoin'],
     usage: ["coinflip", "coinflip heads"],
     module: "Games",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

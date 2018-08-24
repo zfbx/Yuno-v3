@@ -17,6 +17,7 @@ exports.info = {
     aliases: ['sinfo', 'server'],
     usage: ['serverinfo'],
     module: "Utility",
+    nsfw: false,
     serverOnly: true,
     ownerOnly: false,
     requires: [],

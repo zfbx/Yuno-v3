@@ -49,6 +49,7 @@ exports.info = {
     aliases: [],
     usage: ["xkcd", "xkcd 615"],
     module: "Search",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

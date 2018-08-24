@@ -52,6 +52,7 @@ exports.info = {
     aliases: ['generate', 'helpdocs'],
     usage: ["docs"],
     module: "Owner",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: true,
     requires: [],

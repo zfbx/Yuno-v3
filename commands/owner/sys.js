@@ -37,6 +37,7 @@ exports.info = {
     aliases: ['system'],
     usage: ['sys', 'sys cpu'],
     module: "Owner",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: true,
     requires: [],

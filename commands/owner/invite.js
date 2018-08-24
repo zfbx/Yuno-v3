@@ -7,6 +7,7 @@ exports.info = {
     aliases: [],
     usage: ["invite"],
     module: "Owner",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: true,
     requires: [],

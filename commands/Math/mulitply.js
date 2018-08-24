@@ -15,6 +15,7 @@ exports.info = {
     aliases: ['product'],
     usage: ["multiply 5 26 53"],
     module: "Math",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

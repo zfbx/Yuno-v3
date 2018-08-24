@@ -9,6 +9,7 @@ exports.info = {
     aliases: [],
     usage: ["ping"],
     module: "Utility",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

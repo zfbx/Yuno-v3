@@ -27,6 +27,7 @@ exports.info = {
     aliases: [],
     usage: ["listen"],
     module: "Fun",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

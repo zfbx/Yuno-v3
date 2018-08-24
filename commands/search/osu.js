@@ -28,6 +28,7 @@ exports.info = {
     aliases: [],
     usage: ["osu [username]"],
     module: "Search",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

@@ -2,10 +2,7 @@ const rand = require('../../functions/random.js');
 const fetch = require('node-fetch');
 
 exports.run = async (client, message, args) => {
-    
-    if(!message.channel.nsfw || !message.channel.type == 'dm') {
-        return message.channel.send('I\'m sorry, This command is not permitted in this channel.');
-    }
+
     var url = `http://api.obutts.ru/butts/${rand(0, 4335)}`;
 
     fetch(url)
@@ -23,6 +20,7 @@ exports.info = {
     aliases: ['butt'],
     usage: ["butts"],
     module: "NSFW",
+    nsfw: true,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

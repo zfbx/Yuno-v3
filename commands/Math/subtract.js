@@ -15,6 +15,7 @@ exports.info = {
     aliases: ['difference'],
     usage: ["subtract 100 26"],
     module: "Math",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],

@@ -52,6 +52,7 @@ exports.info = {
     aliases: [],
     usage: ["pi", "pi 40"],
     module: "Math",
+    nsfw: false,
     serverOnly: false,
     ownerOnly: false,
     requires: [],
