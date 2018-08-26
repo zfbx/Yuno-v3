@@ -13,7 +13,7 @@ Meet Yuno, a discord bot built to be modular and easy to expand upon through Jav
 `npm install pm2 -g` (To keep the bot running || I suggest reading into how [pm2](http://pm2.keymetrics.io/) works if you've never seen it before)
 
 ### Start
-`npm run start` or `node ./index.js` for a single run
+`npm run start` or `node ./app.js` for a single run
 
 ### Stop
 `npm run stop` or <kbd>ctrl</kbd> + <kbd>c</kbd>

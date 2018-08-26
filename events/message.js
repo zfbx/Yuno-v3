@@ -12,8 +12,7 @@ module.exports = (client, message, oldMessage) => {
     var args = message.content.replace(prefixOrMention, '').split(/ +/g);
     var commandRequest = args[0].toLowerCase();
     args.shift();
-    //client.log('Debug', args);
-
+    
     var command;
     if (client.commands.has(commandRequest)) {
         command = client.commands.get(commandRequest);
@@ -29,7 +28,6 @@ module.exports = (client, message, oldMessage) => {
             } catch (e) {
                 message.reply('Something went horribly wrong..');
             }
-            
         } else {
             if (perm.msg !== '') {
                 message.reply(perm.msg);
