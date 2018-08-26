@@ -8,10 +8,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "pm2 start app.js --name=\"Yuno\"",
+    "setup": "node setup.js",
+    "startpm2": "pm2 start app.js --name=\"Yuno\"",
     "restart": "pm2 restart Yuno",
-    "stop": "pm2 stop Yuno",
-    "startonce": "node app.js",
+    "stoppm2": "pm2 stop Yuno",
+    "start": "node app.js",
     "log": "pm2 logs",
     "logs": "pm2 logs",
     "startlog": "pm2 start app.js --name=\"Yuno\" && pm2 logs",
