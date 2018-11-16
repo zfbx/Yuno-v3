@@ -32,20 +32,17 @@
   },
   "homepage": "https://github.com/zfbx/Yuno",
   "dependencies": {
-    "bufferutil": "^4.0.0",
     "discord.js": "github:discordjs/discord.js",
-    "erlpack": "github:discordapp/erlpack",
-    "escape-string-regexp": "^1.0.5",
+    "enmap": "^4.0.6",
     "glob": "^7.1.2",
-    "libsodium-wrappers": "^0.7.3",
+    "logger": "github:zfbx/logger",
     "mathjs": "^5.1.1",
-    "moment": "^2.22.2",
-    "node-fetch": "^2.2.0",
-    "node-opus": "^0.3.0",
-    "prompt": "^1.0.0",
-    "zlib-sync": "^0.1.4"
+    "node-fetch": "^2.2.0"
   },
-  "devDependencies": {
+  "optionalDependencies": {
+    "bufferutil": "^4.0.0",
+    "zlib-sync": "^0.1.4",
+    "erlpack": "github:discordapp/erlpack",
     "pm2": "^2.10.4"
   }
 }
