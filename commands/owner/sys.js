@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const pkg = require('../../package.json');
-const moment = require('moment');
 const os = require('os');
 
 exports.run = async (client, message, args) => {
@@ -17,12 +16,12 @@ exports.run = async (client, message, args) => {
     } // | Nice: ${cpus[i].times.nice} | Irq: ${cpus[i].times.irq}
 
     if (args[0] && args[0].toLowerCase() == 'cpu') {
-        message.channel.send(cpumsg).catch(console.error);
+        message.channel.send(cpumsg).catch(client.log.error(err));
     } else {
         const embed = new Discord.MessageEmbed()
         .setColor(client.config.embedcolor)
         .setAuthor('System Information')
-        .addField('Uptime', `${moment().subtract(os.uptime(), 'seconds').fromNow(true)}`)
+        .addField('Uptime', `${client.time.sinceMs(os.uptime()*1000)}`)
         .addField('Used Memory', `${Math.round((((os.totalmem() - os.freemem()) / 1000000) + 0.00001) * 100) / 100}mb`, true)
         .addField('Free Memory', `${Math.round(((os.freemem() / 1000000) + 0.00001) * 100) / 100}mb`, true)
         .addField('Total Memory', `${Math.round(((os.totalmem() / 1000000) + 0.00001) * 100) / 100}mb`, true)
