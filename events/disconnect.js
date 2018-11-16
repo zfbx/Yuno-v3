@@ -1,3 +1,3 @@
 module.exports = client => {
-    client.log('ERROR', `You have been disconnected`);
+    client.log.error(`You have been disconnected`);
 }

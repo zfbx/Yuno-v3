@@ -1,11 +1,10 @@
 const fs = require('fs');
-const moment = require('moment');
      
 exports.run = async (client, message, args) => {
     //if (message.author.id != client.config.ownerid) return;
     var now = Date.now();
     message.channel.send('Generating Documents.');
-    client.log("CMD-GEN", "Generating Docs..");
+    client.log.info("Generating Docs..");
     var num = 1, cl = "", template = fs.readFileSync('./docs/CmdListTemplate.html', "utf8"), pre = client.config.prefix;
     client.commands.map(cmd => {
         cl += `<div class="command" id="${num}" data-module="${cmd.info.module.toLocaleLowerCase()}"><div class="command-name">`;
@@ -34,16 +33,16 @@ exports.run = async (client, message, args) => {
             cl += `<span class="cell-part">${pre}${cmd.info.usage[i]}</span>`;
         }
         cl += `</span></div></div>`;
-        //console.log(`Added Command #${num}`);
+        client.log.debug(`Added Command #${num}`);
         num++;
     });
-    client.log("CMD-GEN", `Added ${num - 1} commands.`); //originally for logging for loop adds extra
-    client.log("CMD-GEN", "Saving New Command List..");
-    template = template.replace(/{{COMMANDS}}/, cl).replace(/{{timestamp}}/, moment().format('MMMM Do YYYY, h:mm:ss a'));
+    client.log.info(`Added ${num - 1} commands.`); //originally for logging for loop adds extra
+    client.log.debug("Saving New Command List..");
+    template = template.replace(/{{COMMANDS}}/, cl).replace(/{{timestamp}}/, now);
     fs.writeFileSync('./docs/index.html', template, function (err) {
         if (err) throw err;
     });
-    client.log("CMD-GEN", "Commands Saved!");
+    client.log.info("Commands Saved!");
     message.channel.send(`Docs generated! [Generated in ${Date.now() - now}ms]`);
 };
 

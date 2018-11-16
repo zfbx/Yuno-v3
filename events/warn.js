@@ -1,7 +1,7 @@
 module.exports = (client, warn) => {
-    if (warn) { //apparently this check has to be made? *If I wanna make sure no token is involved.
-        client.log('WARN', String(warn).replace(client.token, '[TOKEN-HERE]'))
+    if (warn) {
+        client.log.warn(String(warn).replace(client.token, '[TOKEN-HERE]'))
     } else {
-        client.log('WARN', 'There was.. some kind of warning apparently.');
+        client.log.warn('There was.. some kind of warning apparently.');
     }
 }

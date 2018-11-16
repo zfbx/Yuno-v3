@@ -29,7 +29,7 @@ module.exports = (client, message, cmd) => {
             var reply;
 
             if (botperms.includes('SEND_MESSAGES')) {
-                client.log('ERROR', `Client tried to run command without giving me permissions to reply [user: ${message.user.tag} | Server: ${message.guild.name}]`);
+                client.log.error(`Client tried to run command without giving me permissions to reply [user: ${message.user.tag} | Server: ${message.guild.name}]`);
                 return {run: false, msg: ''}
             }else if (botperms.length > 1) {
                 reply = `I'm missing the following permissions:`;
