@@ -1,11 +1,9 @@
-const escapeRegex = require('escape-string-regexp');
-
 module.exports = (client, message, oldMessage) => {
     // Should the message even be considered?
     if (message.author.bot || message.system || message.author.id === client.user.id) return;
     if(oldMessage && message.content === oldMessage.content) return;
     // Do they use the prefix or @Mention me?
-    const escapedPrefix = escapeRegex(client.config.prefix);
+    const escapedPrefix = client.config.prefix.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&'); //escape particular characters
     const prefixOrMention = new RegExp(`^(<@!?${client.user.id}>\\s+(?:${escapedPrefix}\\s*)?|${escapedPrefix}\\s*)`, 'i');
     if (!prefixOrMention.test(message.content)) return;
 
