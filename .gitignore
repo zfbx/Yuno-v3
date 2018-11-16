@@ -65,3 +65,4 @@ config.json
 
 #temp folder
 data/temp/*
+config.js
