@@ -8,15 +8,17 @@ Meet Yuno, a discord bot built to be modular and easy to expand upon through Jav
 
 
 ## Set Up
-`npm install` (Install required dependencies)
-`node ./setup.js` (Basic Setup questions / config.json generator)
-`npm install pm2 -g` (To keep the bot running || I suggest reading into how [pm2](http://pm2.keymetrics.io/) works if you've never seen it before)
+1. `npm install` (Install required dependencies)
+2. Make a copy of config.js.example and rename it to config.js. Change the contents to fit your needs and add your discord token.
+3. (Optional) `npm install pm2 -g` (To keep the bot running || I suggest reading into how [pm2](http://pm2.keymetrics.io/) works if you've never seen it before)
 
 ### Start
-`npm run start` or `npm run startpm2` if you have pm2 installed
+`npm run start`
+or if you used step 3 in setup: `npm run startpm2`
 
 ### Stop
-`npm run stop` or <kbd>ctrl</kbd> + <kbd>c</kbd> or `npm run stoppm2` if you ran it from pm2
+<kbd>ctrl</kbd> + <kbd>c</kbd> 
+or if you used step 3 in setup: `npm run stoppm2`
 
 ## Who Is Yuno?
 Yuno (Yuno Gasai) is base off a character from an Anime called Mirai Nikki (Future Diary). Honestly I just really like the character and thought she'd be a great theme for my discord bot :)
