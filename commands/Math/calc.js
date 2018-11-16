@@ -1,7 +1,7 @@
 const math = require("mathjs");
-const limitedEval = math.eval
-//http://mathjs.org/examples/index.html
+const limitedEval = math.eval;
 
+//http://mathjs.org/examples/index.html
 //.calc sqrt(-4) crashes? but 4 wont
 
 math.import({
@@ -14,11 +14,15 @@ math.import({
   }, {override: true})
 
 exports.run = async (client, message, args) => {
+    if (!args[0]) {
+        return message.channel.send('What would you like me to calculate?');
+    }
     try {
 		message.channel.send(limitedEval(args.join(' ')));
-	} catch(err) {
-		if(err) {
-            message.channel.send(`**${err.message}**`);
+	} catch(e) {
+        client.log.error(String(e));
+		if(e.message && typeof e.message === "string") {
+            message.channel.send(`**${e.message}**`);
         }
 	}
 };
