@@ -2,6 +2,8 @@ const fetch = require('node-fetch');
 
 exports.run = async (client, message, args) => {
     
+    return message.channel.send('This command is a work in progress, check back later :)');
+
     // Storing it in a separate .graphql/.gql file is also possible
     var query = `
         query ($id: Int) { # Define which variables will be used in the query (id)
@@ -33,26 +35,24 @@ exports.run = async (client, message, args) => {
                 variables: variables
             })
         };
-
     // Make the HTTP Api request
-    fetch(url, options).then(handleResponse)
-                    .then(handleData)
-                    .catch(handleError);
-    function handleResponse(response) {
-        return response.json().then(function (json) {
-            return response.ok ? json : Promise.reject(json);
-        });
-    }
-    function handleData(data) {
-        console.log(data);
-    }
-    function handleError(error) {
-        console.error(error);
-    }
+    fetch(url, options).then(handleResponse).then(handleData).catch(handleError);
 
+};
 
+function handleResponse(response) {
+    return response.json().then(function (json) {
+        return response.ok ? json : Promise.reject(json);
+    });
+}
 
+function handleData(data) {
+    client.log.debug(data);
+}
 
+function handleError(error) {
+    client.log.error(error);
+}
 
 //would return
 /*
@@ -68,7 +68,7 @@ exports.run = async (client, message, args) => {
       }
     }
 */
-};
+
 
 exports.info = {
     name: 'anime',
