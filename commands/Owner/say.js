@@ -1,5 +1,8 @@
 exports.run = async (client, message, args) => {
     if (message.author.id != client.config.ownerid) return;
+    if (!args[0]) {
+        return message.channel.send('What would you like me to say?');
+    }
     message.channel.send(args.join(' '));
     message.delete();
 };
