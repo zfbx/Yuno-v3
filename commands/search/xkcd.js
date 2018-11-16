@@ -1,11 +1,18 @@
 const rand = require('../../functions/random.js');
 const fetch = require('node-fetch');
+const Discord = require('discord.js');
 
-
-function postComic(message, json) {
-    message.channel.send(`**${json.safe_title}** [${json.num}]`, {
+function postComic(message, json, client) {
+    /*message.channel.send(`**${json.safe_title}** [${json.num}]`, {
         files: [json.img]
-    });
+    });*/
+
+    const embed = new Discord.MessageEmbed()
+        .setAuthor(json.safe_title, "", `https://xkcd.com/${json.num}/`)
+        .setColor(client.config.embedcolor)
+        .setImage(json.img)
+        .setFooter("xkcd", "https://xkcd.com/s/0b7742.png");
+    message.channel.send({embed});
 }
 
 exports.run = async (client, message, args) => {
@@ -22,13 +29,13 @@ exports.run = async (client, message, args) => {
                 if (search == NaN || search > maxnum) {
                     message.channel.send('That\'s not a valid comic number.')
                 } else if (search === 0) {
-                    postComic(message, json);
+                    postComic(message, json, client);
                 } else {
                     var newurl = `https://xkcd.com/${search}/info.0.json`;
                     fetch(newurl)
                         .then(res => res.json())
                         .then(json => {
-                            postComic(message, json);
+                            postComic(message, json, client);
                         });
                 }
             } else {
@@ -36,11 +43,11 @@ exports.run = async (client, message, args) => {
                 fetch(newurl)
                     .then(res => res.json())
                     .then(json => {
-                        postComic(message, json);
+                        postComic(message, json, client);
                     });
             }
-            //console.log(json);
-            //console.log(json[0].preview);
+            //client.log.debug(String(json));
+            //client.log.debug(json[0].preview);
         });
 };
 

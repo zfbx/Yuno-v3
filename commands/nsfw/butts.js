@@ -1,5 +1,6 @@
 const rand = require('../../functions/random.js');
 const fetch = require('node-fetch');
+const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
 
@@ -8,9 +9,14 @@ exports.run = async (client, message, args) => {
     fetch(url)
         .then(res => res.json())
         .then(json => {
-            message.channel.send({
+            /*message.channel.send({ //send as file
                 files: [`http://media.obutts.ru/${json[0].preview}`]
-            });
+            });*/
+            const embed = new Discord.MessageEmbed()
+                .setAuthor("obutts.ru", "", "http://obutts.ru")
+                .setColor(client.config.embedcolor)
+                .setImage(`http://media.obutts.ru/${json[0].preview}`);
+            message.channel.send({embed});
         });
 
 };

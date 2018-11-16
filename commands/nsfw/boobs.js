@@ -1,5 +1,6 @@
 const rand = require('../../functions/random.js');
 const fetch = require('node-fetch');
+const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
 
@@ -8,11 +9,14 @@ exports.run = async (client, message, args) => {
     fetch(url)
         .then(res => res.json())
         .then(json => {
-            //console.log(json);
-            //console.log(json[0].preview);
-            message.channel.send({
+            /*message.channel.send({ //download then resend the photo
                 files: [`http://media.oboobs.ru/${json[0].preview}`]
-            });
+            });*/
+            const embed = new Discord.MessageEmbed()
+                .setAuthor("oboobs.ru", "", "http://oboobs.ru")
+                .setColor(client.config.embedcolor)
+                .setImage(`http://media.oboobs.ru/${json[0].preview}`);
+            message.channel.send({embed});
         });
 
 };

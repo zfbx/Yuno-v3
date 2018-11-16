@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
     var url = `http://aws.random.cat/meow`;
@@ -6,9 +7,14 @@ exports.run = async (client, message, args) => {
     fetch(url)
         .then(res => res.json())
         .then(json => {
-            message.channel.send({
+            /*message.channel.send({
                 files: [json.file]
-            });
+            });*/
+            const embed = new Discord.MessageEmbed()
+                .setAuthor("random.cat", "", "http://random.cat")
+                .setColor(client.config.embedcolor)
+                .setImage(json.file);
+            message.channel.send({embed});
         });
 
 };
