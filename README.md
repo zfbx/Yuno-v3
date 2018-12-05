@@ -1,4 +1,4 @@
-[![nadeko2](https://raw.githubusercontent.com/zfbx/Yuno/master/docs/yunoheader.png)](https://zfbx.github.io/Yuno/)
+[![yuno](https://raw.githubusercontent.com/zfbx/Yuno/master/docs/yunoheader.png)](https://zfbx.github.io/Yuno/)
 
 Meet Yuno, a discord bot built to be modular and easy to expand upon through Javascript using the Discord.js module.
 
@@ -6,6 +6,23 @@ Meet Yuno, a discord bot built to be modular and easy to expand upon through Jav
 
 [Command List](https://zfbx.github.io/Yuno/) | [Discord Server](https://discord.gg/kXbV9Zu)
 
+## Contribute
+
+Yuno is maintained with ♥️ in my free time. If you'd like to contribute but aren't good with code, you can send me a small contribution!
+
+[![Tip with PayPal](https://img.shields.io/badge/PayPal-Buy_me...-lightgrey.svg)](https://www.paypal.me/zfbx)
+[![Tip with PayPal](https://img.shields.io/badge/soda-%245-green.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=5.00&currencyCode=USD&locale.x=en_US&country.x=US)
+[![Tip with PayPal](https://img.shields.io/badge/snacks-%2410-yellow.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=10.00&currencyCode=USD&locale.x=en_US&country.x=US)
+[![Tip with PayPal](https://img.shields.io/badge/lunch-%2420-orange.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=20.00&currencyCode=USD&locale.x=en_US&country.x=US)
+[![Tip with PayPal](https://img.shields.io/badge/dinner-%2450-red.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=50.00&currencyCode=USD&locale.x=en_US&country.x=US)
+[![Tip with PayPal](https://img.shields.io/badge/custom_amount-...-lightgrey.svg)](https://www.paypal.me/zfbx)
+
+Otherwise you can add or fix features for me ♥ Yuno would greatly appreciate it.
+1. Make pull requests to the [**Master Branch**](https://github.com/zfbx/Yuno/tree/master).
+2. Keep each pull request to a single feature or fix.
+3. Please explain what you did in the PR message.
+
+Thank you so much for your help ^-^
 
 ## Set Up
 1. `npm install` (Install required dependencies)
@@ -34,12 +51,5 @@ After much consideration I've decided to go with the GNU GPLv3 License. And to m
 |✔ Patent use      |👉 State changes                |                   |
 |✔ Private use     |                                 |                  |
 
-
-## Contribute
-1. Make pull requests to the [**Master Branch**](https://github.com/zfbx/Yuno/tree/master).
-2. Keep each pull request to a single feature or fix.
-3. Please explain what you did in the PR message.
-
-Thank you so much for your help ^-^
 
 
