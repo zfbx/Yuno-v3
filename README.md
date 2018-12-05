@@ -11,10 +11,10 @@ Meet Yuno, a discord bot built to be modular and easy to expand upon through Jav
 Yuno is maintained with ♥️ in my free time. If you'd like to contribute but aren't good with code, you can send me a small contribution!
 
 [![Tip with PayPal](https://img.shields.io/badge/PayPal-Buy_me...-lightgrey.svg)](https://www.paypal.me/zfbx)
-[![Tip with PayPal](https://img.shields.io/badge/soda-%245-green.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=5.00&currencyCode=USD&locale.x=en_US&country.x=US)
-[![Tip with PayPal](https://img.shields.io/badge/snacks-%2410-yellow.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=10.00&currencyCode=USD&locale.x=en_US&country.x=US)
-[![Tip with PayPal](https://img.shields.io/badge/lunch-%2420-orange.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=20.00&currencyCode=USD&locale.x=en_US&country.x=US)
-[![Tip with PayPal](https://img.shields.io/badge/dinner-%2450-red.svg)](https://www.paypal.com/paypalme/zfbx/send?amount=50.00&currencyCode=USD&locale.x=en_US&country.x=US)
+[![Tip with PayPal](https://img.shields.io/badge/soda-%245-green.svg)](https://www.paypal.me/zfbx/5)
+[![Tip with PayPal](https://img.shields.io/badge/snacks-%2410-yellow.svg)](https://www.paypal.me/zfbx/10)
+[![Tip with PayPal](https://img.shields.io/badge/lunch-%2420-orange.svg)](https://www.paypal.me/zfbx/20)
+[![Tip with PayPal](https://img.shields.io/badge/dinner-%2450-red.svg)](https://www.paypal.me/zfbx/50)
 [![Tip with PayPal](https://img.shields.io/badge/custom_amount-...-lightgrey.svg)](https://www.paypal.me/zfbx)
 
 Otherwise you can add or fix features for me ♥ Yuno would greatly appreciate it.
