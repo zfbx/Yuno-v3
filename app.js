@@ -10,14 +10,9 @@ const client = new Discord.Client({
     ]
 });
 
-/*
-client.guildDB = new Enmap({
-    name: "guildDB",
-    fetchAll: false,
-    autoFetch: true,
-    cloneLevel: 'deep'
-});
-*/
+client.guildDB = new Enmap({ name: "guildDB" });
+client.twitchDB = new Enmap({ name: "twitchDB" });
+
 client.config = require('./config.js');
 client.log = logger({
     mode: client.config.loglevel
@@ -28,20 +23,34 @@ client.token = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
-glob('commands/**/*.js', {recursive: true}, (err, files) => {
-    if (err) console.error(err);
-    client.log.info(`${files.length} commands found.`);
-    files.forEach(f => {
-        let props = require(`./${f}`);
-        client.log.debug(`Loading Command: ${props.info.name}.`);
-        client.commands.set(props.info.name, props);
-        props.info.aliases.forEach(alias => {
-            client.aliases.set(alias, props.info.name);
+function loadCommands(folder) {
+    glob(`commands/${folder}/*.js`, (err, files) => {
+        if (err) console.error(err);
+        client.log.info(`${files.length} ${folder} commands found.`);
+        files.forEach(f => {
+            let props = require(`./${f}`);
+            client.log.debug(`Loading Command: ${props.info.name}.`);
+            client.commands.set(props.info.name, props);
+            props.info.aliases.forEach(alias => {
+                client.aliases.set(alias, props.info.name);
+            });
         });
     });
-});
+}
 
-client.on('ready', () => require('./events/ready')(client));
+loadCommands('Administration');
+loadCommands('Fun');
+loadCommands('Games');
+loadCommands('Help');
+loadCommands('Math');
+loadCommands('Music');
+loadCommands('NSFW');
+loadCommands('Owner');
+loadCommands('Search');
+loadCommands('Utility');
+loadCommands('XP');
+
+client.on('ready', () => require('./events/readyAndCron')(client));
 client.on('message', message => require('./events/message')(client, message));
 client.on('messageUpdate', (oldMessage, newMessage) => require('./events/message')(client, newMessage, oldMessage));
 client.on('guildCreate', guild => require('./events/guildCreate')(client, guild));
