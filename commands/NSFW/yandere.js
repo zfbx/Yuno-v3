@@ -1,6 +1,6 @@
 const rand = require('../../functions/random.js');
 const fetch = require('node-fetch');
-const banned_tags = ['child', 'childs', 'childporn', 'youngs', 'young'];
+const banned_tags = ['child', 'childs', 'childporn', 'children', 'youngs', 'young', 'loli', 'cub'];
 
 exports.run = async (client, message, args) => {
 
@@ -17,10 +17,7 @@ exports.run = async (client, message, args) => {
             }
             url += args.join('+');
         }
-
-
         //TODO: Pulls really large photos, maybe try preview_url or jpeg_url instead of file_url
-
         fetch(url)
             .then(res => res.json())
             .then(json => {
