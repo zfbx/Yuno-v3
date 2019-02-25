@@ -4,5 +4,10 @@ module.exports = {
     'ownerlogging': true, // Log online messages in DM to the first Owner?
     'prefix': '.', // prefix to get the bots attention ex: .command
     "loglevel": 'INFO', // DEBUG > INFO > WARN > ERROR
-    'embedcolor': 16755385 // hex color converted to dec for embeds and username
+    'embedcolor': 16755385, // hex color converted to dec for embeds and username
+    "twitchClientId": "12345678901234567890",
+    "statusList": [
+        "Use .help",
+        "games"
+    ],
 }
