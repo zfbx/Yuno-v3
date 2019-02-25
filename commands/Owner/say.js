@@ -4,7 +4,14 @@ exports.run = async (client, message, args) => {
         return message.channel.send('What would you like me to say?');
     }
     message.channel.send(args.join(' '));
-    message.delete();
+    if (message.guild) {
+        try {
+            message.delete();
+        } 
+        catch(e) {
+            client.log.warn('Unable to delete original message.');
+        }
+    }
 };
 
 exports.info = {
