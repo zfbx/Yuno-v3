@@ -9,7 +9,6 @@ exports.run = async (client, message, args) => {
     message.channel.send('Searching for OSU profile...').then(msg => {
         var url = `http://lemmmy.pw/osusig/sig.php?uname=${args[0]}&flagshadow&xpbar&xpbarhex&pp=2&mode=${mode}`;
 
-
         temp = `${__dirname}/../../data/temp/osu${args[0].replace(/([^\w\d])+/g, '')}.png`
     
         fetch(url).then(image => image.body
