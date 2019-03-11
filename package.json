@@ -1,6 +1,6 @@
 {
   "name": "yuno",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "my new discord.js bot",
   "private": true,
   "main": "index.js",
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/zfbx/Yuno",
   "dependencies": {
+    "better-sqlite3": "^5.4.0",
     "discord.js": "github:discordjs/discord.js",
     "enmap": "^4.0.6",
     "glob": "^7.1.2",
