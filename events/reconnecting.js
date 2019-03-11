@@ -1,3 +1,3 @@
 module.exports = client => {
-    client.log.warn(`Reconnecting`);
+    client.log.warn(`Connection was lost.`);
 }
