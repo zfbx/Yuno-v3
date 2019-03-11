@@ -33,7 +33,7 @@ function getEmojis(c) {
     }
     var reply = "";
     for (n in numbers) {
-        reply += emojis[numbers[n]] + " ";
+        reply += emojis[numbers[n]];
     }
     return reply;
 }
