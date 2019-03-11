@@ -1,0 +1,537 @@
+{
+    "Sellbots" : {
+        "Cold Caller" : {
+            "__Comment" : "[This comment should be ignored] This document was created Tuesday, July 24th, 2018. All information should be correct up till this date. :)",
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/cold_caller.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Cold_Caller",
+            "level" : "1-5",
+            "damage" : "1-10",
+            "weakness" : "Squirting Flower",
+            "locations" : [
+                "Punchline Place",
+                "Silly Street",
+                "Elm Street",
+                "Oak Street",
+                "Alto Avenue",
+                "Sleet Street",
+                "Sellbot Headquarters",
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        },
+        "Telemarketer" : {
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/telemarketer.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Telemarketer",
+            "level" : "2-6",
+            "damage" : "1-12",
+            "weakness" : "Whistle",
+            "locations" : [
+                "Punchline Place",
+                "Silly Street",
+                "Elm Street",
+                "Oak Street",
+                "Alto Avenue",
+                "Sleet Street",
+                "Lullaby Lane",
+                "Sellbot Headquarters",
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        },
+        "Name Dropper" : {
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/name_dropper.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Name_Dropper",
+            "level" : "3-7",
+            "damage" : "2-14",
+            "weakness" : "Anvil",
+            "locations" : [
+                "Punchline Place",
+                "Silly Street",
+                "Elm Street",
+                "Oak Street",
+                "Alto Avenue",
+                "Sleet Street",
+                "Lullaby Lane",
+                "Sellbot Headquarters",
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        },
+        "Glad Hander" : {
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/glad_hander.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Glad_Hander",
+            "level" : "4-8",
+            "damage" : "1-20",
+            "weakness" : "Whole Fruit Pie",
+            "locations" : [
+                "Seaweed Street",
+                "Lighthouse Lane",
+                "Elm Street",
+                "Maple Street",
+                "Oak Street",
+                "Alto Avenue",
+                "Baritone Boulevard",
+                "Sleet Street",
+                "Polar Place",
+                "Lullaby Lane",
+                "Pajama Place",
+                "Sellbot Headquarters",
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        },
+        "Mover & Shaker" : {
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/mover_and_shaker.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Mover_%26_Shaker",
+            "level" : "5-9",
+            "damage" : "5-21",
+            "weakness" : "Cream Pie Slice",
+            "locations" : [
+                "Seaweed Street",
+                "Oak Street",
+                "Sleet Street",
+                "Lullaby Lane",
+                "Sellbot HQ",
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        },
+        "Two-Face" : {
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/two_face.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Two-Face",
+            "level" : "6-10",
+            "damage" : "6-18",
+            "weakness" : "Hypno Goggles",
+            "locations" : [
+                "Oak Street (Common)",
+                "Baritone Boulevard (Very Rare)",
+                "Sleet Street (Common)",
+                "Polar Place (Very Rare)",
+                "Lullaby Lane (Common)",
+                "Sellbot Headquarters",
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        },
+        "The Mingler" : {
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/the_mingler.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/The_Mingler",
+            "level" : "7-11",
+            "damage" : "7-24",
+            "weakness" : "Birthday Cake",
+            "locations" : [
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        },
+        "Mr. Hollywood" : {
+            "type" : "Sellbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/mr_hollywood.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Mr._Hollywood",
+            "level" : "8-12",
+            "damage" : "8-20",
+            "weakness" : "Wedding Cake",
+            "locations" : [
+                "Sellbot Factory",
+                "Sellbot Towers"
+            ]
+        }
+    },
+    "Cashbots" : {
+        "Short Change" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/short_change.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Short_Change",
+            "level" : "1-5",
+            "damage" : "1-11",
+            "weakness" : "Flower Pot",
+            "locations" : [
+                "Punchline Place",
+                "Silly Street",
+                "Seaweed Street",
+                "Alto Avenue",
+                "Baritone Boulevard",
+                "Sleet Street",
+                "Cashbot Vault"
+            ]
+        },
+        "Penny Pincher" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/penny_pincher.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Penny_Pincher",
+            "level" : "2-6",
+            "damage" : "1-12",
+            "weakness" : "$5 Bill",
+            "locations" : [
+                "Punchline Place",
+                "Silly Street",
+                "Seaweed Street",
+                "Alto Avenue",
+                "Baritone Boulevard",
+                "Sleet Street",
+                "Lullaby Lane",
+                "Pajama Place",
+                "Cashbot Vault"
+            ]
+        },
+        "Tightwad" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/tightwad.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Tightwad",
+            "level" : "3-7",
+            "damage" : "3-18",
+            "weakness" : "Sandbag",
+            "locations" : [
+                "Punchline Place",
+                "Silly Street",
+                "Seaweed Street",
+                "Alto Avenue",
+                "Baritone Boulevard",
+                "Sleet Street",
+                "Lullaby Lane",
+                "Pajama Place",
+                "Cashbot Headquarters",
+                "Cashbot Vault"
+            ]
+        },
+        "Bean Counter" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/bean_counter.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Bean_Counter",
+            "level" : "4-8",
+            "damage" : "4-15",
+            "weakness" : "Quicksand",
+            "locations" : [
+                "Seaweed Street",
+                "Alto Avenue",
+                "Baritone Boulevard",
+                "Sleet Street",
+                "Pajama Place",
+                "Lullaby Lane",
+                "Cashbot HQ",
+                "Cashbot Vault"
+            ]
+        },
+        "Number Cruncher" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/number_cruncher.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Number_Cruncher",
+            "level" : "5-9",
+            "damage" : "5-15",
+            "weakness" : "Unknown",
+            "locations" : [
+                "Seaweed Street",
+                "Baritone Boulevard",
+                "Sleet Street",
+                "Lullaby Lane",
+                "Pajama Place",
+                "Cashbot HQ",
+                "Cashbot Vault"
+            ]
+        },
+        "Money Bags" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/money_bags.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Money_Bags",
+            "level" : "6-10",
+            "damage" : "6-18",
+            "weakness" : "Safe",
+            "locations" : [
+                "Seaweed Street",
+                "Baritone Boulevard",
+                "Sleet Street",
+                "Lullaby Lane",
+                "Pajama Place",
+                "Cashbot HQ",
+                "Cashbot Mints",
+                "Cashbot Vault"
+            ]
+        },
+        "Loan Shark" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/loan_shark.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Loan_Shark",
+            "level" : "7-11",
+            "damage" : "14-24",
+            "weakness" : "Geyser",
+            "locations" : [
+                "Cashbot Vault",
+                "Cashbot Mints"
+            ]
+        },
+        "Robber Baron" : {
+            "type" : "Cashbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/robber_baron.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Robber_Baron",
+            "level" : "8-12",
+            "damage" : "10-21",
+            "weakness" : "$10 Bill",
+            "locations" : [
+                "Cashbot Mints",
+                "Cashbot Vault"
+            ]
+        }
+    },
+    "Lawbots" : {
+        "Bottom Feeder" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/bottom_feeder.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Bottom_Feeder",
+            "level" : "1-5",
+            "damage" : "1-10",
+            "weakness" : "Banana Peel",
+            "locations" : [
+                "Loopy Lane",
+                "Silly Street",
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace"
+            ]
+        },
+        "Bloodsucker" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/bloodsucker.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Bloodsucker",
+            "level" : "2-6",
+            "damage" : "1-14",
+            "weakness" : "Cupcake",
+            "locations" : [
+                "Loopy Lane",
+                "Silly Street",
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Lullaby Lane"
+            ]
+        },
+        "Double Talker" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/double_talker.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Double_Talker",
+            "level" : "3-7",
+            "damage" : "1-18",
+            "weakness" : "Rake",
+            "locations" : [
+                "Loopy Lane",
+                "Silly Street",
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Polar Place",
+                "Lullaby Lane"
+            ]
+        },
+        "Ambulance Chaser" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/ambulance_chaser.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Ambulance_Chaser",
+            "level" : "4-8",
+            "damage" : "2-19",
+            "weakness" : "Aoogah",
+            "locations" : [
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Polar Place",
+                "Lullaby Lane",
+                "Lawbot Headquarters",
+                "Lawbot Courthouse"
+            ]
+        },
+        "Back Stabber" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/back_stabber.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Back_Stabber",
+            "level" : "5-9",
+            "damage" : "5-18",
+            "weakness" : "Big Weight",
+            "locations" : [
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Polar Place",
+                "Lullaby Lane",
+                "Lawbot Headquarters",
+                "Lawbot Courthouse"
+            ]
+        },
+        "Spin Doctor" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/spin_doctor.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Spin_Doctor",
+            "level" : "6-10",
+            "damage" : "6-20",
+            "weakness" : "Anvil",
+            "locations" : [
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Polar Place",
+                "Lullaby Lane",
+                "Lawbot Headquarters",
+                "District Attorney's Office",
+                "Lawbot Courthouse"
+            ]
+        },
+        "Legal Eagle" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/legal_eagle.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Legal_Eagle",
+            "level" : "7-11",
+            "damage" : "7-22",
+            "weakness" : "Storm Cloud",
+            "locations" : [
+                "District Attorney's Office",
+                "Lawbot Courthouse"
+            ]
+        },
+        "Big Wig" : {
+            "type" : "Lawbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/big_wig.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Big_Wig",
+            "level" : "8-12",
+            "damage" : "16-21",
+            "weakness" : "Storm Cloud",
+            "locations" : [
+                "District Attorney's Office",
+                "Lawbot Headquarters"
+            ]
+        }
+    },
+    "Bossbots" : {
+        "Flunky" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/flunky.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Flunky",
+            "level" : "1-5",
+            "damage" : "1-7",
+            "weakness" : "$1 Bill",
+            "locations" : [
+                "Silly Street",
+                "Barnacle Boulevard",
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Walrus Way"
+            ]
+        },
+        "Pencil Pusher" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/pencil_pusher.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Pencil_Pusher",
+            "level" : "2-6",
+            "damage" : "1-12",
+            "weakness" : "Glass of Water",
+            "locations" : [
+                "Loopy Lane",
+                "Silly Street",
+                "Barnacle Boulevard",
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Walrus Way",
+                "Lullaby Lane"
+            ]
+        },
+        "Yesman" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/yesman.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Yesman",
+            "level" : "3-7",
+            "damage" : "1-8",
+            "weakness" : "Fruit Pie Slice",
+            "locations" : [
+                "Silly Street",
+                "Barnacle Boulevard",
+                "Lighthouse Lane",
+                "Tenor Terrace",
+                "Walrus Way",
+                "Lullaby Lane"
+            ]
+        },
+        "Micromanager" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/micromanager.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Micromanager",
+            "level" : "4-8",
+            "damage" : "3-18",
+            "weakness" : "Anvil",
+            "locations" : [
+                "Barnacle Boulevard",
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Walrus Way",
+                "Lullaby Lane",
+                "Bossbot Headquarters"
+            ]
+        },
+        "Downsizer" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/downsizer.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Downsizer",
+            "level" : "5-9",
+            "damage" : "4-15",
+            "weakness" : "Trapdoor",
+            "locations" : [
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Walrus Way",
+                "Lullaby Lane",
+                "Oak Street",
+                "Bossbot Headquarters",
+                "Bossbot Clubhouse"
+            ]
+        },
+        "Head Hunter" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/head_hunter.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Head_Hunter",
+            "level" : "6-10",
+            "damage" : "5-21",
+            "weakness" : "Grand Piano",
+            "locations" : [
+                "Lighthouse Lane",
+                "Maple Street",
+                "Tenor Terrace",
+                "Walrus Way",
+                "Lullaby Lane",
+                "Bossbot Headquarters",
+                "Cog Golf Course",
+                "Bossbot Clubhouse"
+            ]
+        },
+        "Corporate Raider" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/corporate_raider.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/Corporate_Raider",
+            "level" : "7-11",
+            "damage" : "6-24",
+            "weakness" : "Toontanic",
+            "locations" : [
+                "Cog Golf Course",
+                "Bossbot Clubhouse"
+            ]
+        },
+        "The Big Cheese" : {
+            "type" : "Bossbot",
+            "picture" : "https://toonhq.org/static/2.4.3/img/cogs/the_big_cheese.png",
+            "wiki" : "http://toontownrewritten.wikia.com/wiki/The_Big_Cheese",
+            "level" : "8-12",
+            "damage" : "8-22",
+            "weakness" : "Unknown",
+            "locations" : [
+                "Cog Golf Course",
+                "Bossbot Clubhouse"
+            ]
+        }
+    }
+}
