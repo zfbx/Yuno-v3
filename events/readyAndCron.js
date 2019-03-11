@@ -26,7 +26,6 @@ function setRandomActivity(client) {
     }
 }
 
-
 function checkTwitchStreams(client) {
     var test = "kayleighthebunny";
     //var test = "ninja";
