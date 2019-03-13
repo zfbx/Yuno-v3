@@ -15,8 +15,15 @@ exports.run = async (client, message, args) => {
             const embed = new Discord.MessageEmbed()
                 .setAuthor("obutts.ru", "", "http://obutts.ru")
                 .setColor(client.config.embedcolor)
-                .setImage(`http://media.obutts.ru/${json[0].preview}`);
+                .setImage(`http://media.obutts.ru/${json[0].preview}`)
+                .setFooter(`Request by: ${message.author.tag}`);
             message.channel.send({embed});
+
+            try {
+                message.delete();
+            } catch(e){
+                console.log(e);
+            }
         });
 
 };

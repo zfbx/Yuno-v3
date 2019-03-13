@@ -4,34 +4,31 @@ const banned_tags = ['child', 'childs', 'childporn', 'children', 'youngs', 'youn
 
 exports.run = async (client, message, args) => {
 
-    //TODO: Add "searching..." reply because upload takes a while to post
-    message.channel.send('Searching...').then(msg => {
-        var url = 'https://yande.re/post.json?limit=100&tags=';
-        if (!args) {
-            url = 'https://yande.re/post.json?limit=100';
-        } else {
-            for (var i = 0; i < args.length; i++) {
-                if (banned_tags.indexOf(args[i].toLowerCase()) > -1 ) {
-                    return message.channel.send(`This tag is banned.`);
-                } 
-            }
-            url += args.join('+');
+    var url = 'https://yande.re/post.json?limit=100&tags=';
+    if (!args) {
+        url = 'https://yande.re/post.json?limit=100';
+    } else {
+        for (var i = 0; i < args.length; i++) {
+            if (banned_tags.indexOf(args[i].toLowerCase()) > -1 ) {
+                return message.channel.send(`This tag is banned.`);
+            } 
         }
-        //TODO: Pulls really large photos, maybe try preview_url or jpeg_url instead of file_url
-        fetch(url)
-            .then(res => res.json())
-            .then(json => {
-                if (json.length > 0) {
-                    var post = json[rand(0, json.length-1)];
-                    message.channel.send(`**Full Size:** <${post.file_url}>`, {
-                        files: [post.preview_url]
-                    }).then(msg.delete());
-                } else {
-                    return msg.edit('No images found.');
-                } 
-                
-            });
-    });
+        url += args.join('+');
+    }
+    //TODO: Pulls really large photos, maybe try preview_url or jpeg_url instead of file_url
+    fetch(url)
+        .then(res => res.json())
+        .then(json => {
+            if (json.length > 0) {
+                var post = json[rand(0, json.length-1)];
+                message.channel.send(`**Full Size:** <${post.file_url}>`, {
+                    files: [post.preview_url]
+                });
+            } else {
+                return message.channel.send('No images found.');
+            } 
+            
+        });
 };
 
 exports.info = {

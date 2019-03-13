@@ -3,14 +3,8 @@ const Discord = require('discord.js');
 
 exports.run = async (client, message, args) => {
     if (!args[0]) {
-        /*var cognames = "";
-        for(i=0; i<cogs.length; i++){
-            cognames += cogs[i]
-        }*/
-        //console.log(Object.keys(cogs));
         return message.channel.send(`Which cog do you want info on:\n${Object.keys(cogs).join(', ')}`);
     }
-        
 
     arg = args;
     for(i=0; i < arg.length; i++) {
@@ -33,8 +27,13 @@ exports.run = async (client, message, args) => {
         .addField("Damage", cog.damage, true)
         .addField("Locations", locs, true)
         .addField("Weakness", cog.weakness, true)
-        .setFooter("Toontown Rewritten");
+        .setFooter("Toontown Rewritten | " + message.author.tag);
     message.channel.send({embed});
+    try {
+        message.delete();
+    } catch(e) {
+        console.log(e)
+    }
 };
 
 exports.info = {
