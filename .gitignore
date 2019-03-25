@@ -67,4 +67,4 @@ config.json
 data/temp/*
 config.js
 
-/data.enmap.*
+/data/enmap.*
