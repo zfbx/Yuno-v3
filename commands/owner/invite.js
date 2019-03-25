@@ -1,5 +1,5 @@
 exports.run = async (client, message, args) => {
-    return message.channel.send(`https://discordapp.com/oauth2/authorize?&client_id=${client.user.id}&scope=bot`);
+    return message.channel.send(`https://discordapp.com/oauth2/authorize?&client_id=${client.user.id}&scope=bot&permissions=2146958839`);
 };
 
 exports.info = {
