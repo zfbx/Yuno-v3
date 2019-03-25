@@ -25,35 +25,15 @@ module.exports = (client, message, cmd) => {
             }
             return {run: true, msg: ''};
         } else {
-            var botperms = message.guild.member(client.user).missingPermissions(cmd.botPermissions, true);
-            var reply;
-
-            if (botperms.includes('SEND_MESSAGES')) {
-                client.log.error(`Client tried to run command without giving me permissions to reply [user: ${message.user.tag} | Server: ${message.guild.name}]`);
+            if (!message.guild.member(client.user).hasPermission('SEND_MESSAGES', true)) {
+                client.users.get(client.config.ownerid[i]).send(`Client tried to run command without giving me permissions to reply [user: ${message.user.tag} | Server: ${message.guild.name}]`);
                 return {run: false, msg: ''}
-            }else if (botperms.length > 1) {
-                reply = `I'm missing the following permissions:`;
-                for (i = 0; i < botperms.length; i++) {
-                    reply += ` ${botperms[i]},`;
-                }
-                reply = reply.slice(0, -1) + '.';
             } else {
-                reply = `I'm missing the following permission: ${botperms[0]}.`;
+                reply = `I'm missing the required permission(s) to run this command.`;
             }
             return { run: false, msg: reply };
         }
     } else {
-        var perms = message.member.missingPermissions(cmd.requires, true);
-        var reply;
-        if (perms.length > 1) {
-            reply = `I'm sorry, you are missing the following permissions:`;
-            for (i = 0; i < perms.length; i++) {
-                reply += ` ${perms[i]},`;
-            }
-            reply = reply.slice(0, -1) + '.';
-        } else {
-            reply = `I'm sorry you're missing the following permission: ${perms[0]}.`;
-        }
-        return { run: false, msg: reply };
+        return { run: false, msg: `I'm sorry, you are missing a required permission to run this command.` };
     }
 };
