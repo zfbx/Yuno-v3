@@ -3,7 +3,7 @@ const logger = require('logger');
 const Discord = require('discord.js');
 const Enmap = require("enmap");
 const client = new Discord.Client({
-    disableEveryone: true,
+    //disableEveryone: true,
     disabledEvents: [
         'TYPING_START',
         'USER_NOTE_UPDATE'
@@ -16,7 +16,12 @@ client.guildDB = new Enmap({
     autoFetch: true,
     cloneLevel: 'deep' 
 });
-//client.twitchDB = new Enmap({ name: "twitchDB" });
+client.twitchDB = new Enmap({ 
+    name: "twitchDB", 
+    fetchAll: true,
+    autoFetch: true,
+    cloneLevel: 'deep'  
+});
 
 client.guildDBDefaults = {	
     prefix: ".",
