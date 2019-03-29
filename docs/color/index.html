@@ -27,10 +27,13 @@
 
         #color {
             border: solid #666 1px;
-            border-radius: 2px;
-            color: #fff;
             font-size: 20px;
             width: 400px;
+            margin-top: 12px;
+            padding: 5px;
+            text-align: center;
+            color: #292929;
+            border-radius: 5px;
         }
 
         #preview {
@@ -41,11 +44,13 @@
             background-color: #36393f;
             text-align: left;
             margin: 4px auto;
+            font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
         #preview sub {
             color: hsla(0,0%,100%,.2);
             font-size: 12px;
             font-weight: 400;
+            vertical-align: baseline;
         }
         #nametext {
             cursor: pointer;
@@ -82,8 +87,8 @@
             <div id="colorpicker"></div>
 
             <div id="preview">
-                <span id="nametext">Your Username</span><sub>Today at 12:30 PM</sub><br />
-                This is a Preview of the username color on a dark themed discord.
+                <span id="nametext" style="color:#FFAAB9">Your Username</span><sub>Today at 12:30 PM</sub><br />
+                Name preview. Run the command below for this color.
             </div>
 
             <input type="text" name="color" id="color" value=".color FFAAB9" onclick="this.select()" readonly>
