@@ -9,6 +9,49 @@
     <link href="/style/style.css" rel="stylesheet" type="text/css">
     <link href="/style/colorjoe.css" rel="stylesheet" type="text/css">
     <script src="/scripts/colorjoe.js"></script>
+    <style>
+        .colorPicker .extras .currentColor {
+            height: 240px;
+            width: 80px;
+        }
+        .twod, .bg2 {
+            width: 400px;
+        }
+        .oned {
+            width: 30px;
+        }
+        .commands {
+            text-align: center;
+            background-color: unset;
+        }
+
+        #color {
+            border: solid #666 1px;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 20px;
+            width: 400px;
+        }
+
+        #preview {
+            display: block;
+            width: 400px;
+            padding: 5px;
+            color: #dcddde;
+            background-color: #36393f;
+        }
+        #preview sub {
+            color: hsla(0,0%,100%,.2);
+            font-size: 12px;
+            font-weight: 400;
+        }
+        #nametext {
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+    </style>
 </head>
 
 <body>
@@ -36,19 +79,31 @@
 
             <div id="colorpicker"></div>
 
-            <div id="colorcommand"></div>
+            <div id="preview">
+                <span id="nametext">Your Username</span><sub>Today at 12:30 PM</sub><br />
+                This is a Preview of the username color on a dark themed discord.
+            </div>
+
+            <input type="text" name="color" id="color" value=".color FFAAB9" onclick="this.select()" readonly>
 
         </div>
     </div>
 
     <script>
-        const joe = colorjoe.rgb('colorpicker', '#FFAAB9', [
-            'currentColor',
-            'hex'
+        const joe = colorjoe.hex('colorpicker', '#FFAAB9', [
+            'currentColor'
         ]);
+        var col = document.getElementById('color');
+        var nt = document.getElementById('nametext');
 
-        joe.on("change", color => console.log("Selecting " + color.css()));
-        joe.on("done", color => console.log("Selected " + color.css()));
+        joe.on("change", color => {
+            col.value = `.color ${color.hex().substring(1)}`;
+            nt.style.color = color.hex();
+        });
+        joe.on("done", color => {
+            col.value = `.color ${color.hex().substring(1)}`;
+            nt.style.color = color.hex();
+        });
     </script>
 </body>
 </html>
