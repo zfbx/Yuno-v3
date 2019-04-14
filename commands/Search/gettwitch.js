@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
                 .setImage(`${ch.preview.large}?ver=${Math.floor(Math.random() * 100000)}`)
                 .addField("Streaming", ch.game, true)
                 .addField("Viewers", `**${ch.viewers}**`, true)
-                .setFooter(`${ch.channel.followers} follower${(ch.channel.partner ? " | Partnered" : "")}${(ch.channel.mature ? " | Mature Stream" : "")}`);
+                .setFooter(`${ch.channel.followers} followers${(ch.channel.partner ? " | Partnered" : "")}${(ch.channel.mature ? " | Mature Stream" : "")}`);
             message.channel.send({embed});
         });
 };
