@@ -31,7 +31,9 @@ client.guildDBDefaults = {
     logEdits: true,
     logRoles: true,
     logVoice: false,
+    colorRoles: false,
     autoRole: "",
+    termsRole: "",
     welcomeChannel: "",
     welcomeMessage: "Say hello to {{user}}, everyone!"
 }
