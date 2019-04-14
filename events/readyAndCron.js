@@ -56,7 +56,7 @@ function checkTwitchStreams(client) {
                     .setImage(`${ch.preview.large}?ver=${Math.floor(Math.random() * 100000)}`)
                     .addField("Streaming", ch.game, true)
                     .addField("Viewers", `**${ch.viewers}**`, true)
-                    .setFooter(`${ch.channel.followers} follower${(ch.channel.partner ? " | Partnered" : "")}${(ch.channel.mature ? " | Mature Stream" : "")}`);
+                    .setFooter(`${ch.channel.followers} followers${(ch.channel.partner ? " | Partnered" : "")}${(ch.channel.mature ? " | Mature Stream" : "")}`);
                 
                 for(j=0; j < user.channels.length; j++){
                     client.channels.get(user.channels[j]).send(`Hey @everyone, ${ch.channel.display_name} is live!`,{embed});
