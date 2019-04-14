@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: #303030;
+    background: #36393f;
 }
 
 p {
@@ -29,6 +29,10 @@ p {
     }
 }
 
+#headerimg {
+    border-radius: 4px;
+}
+
 .commands-list-container {
     font-family: NotoSans, sans-serif;
     margin: 0 auto;
@@ -37,18 +41,18 @@ p {
     padding-top: 0;
 }
 .cl-header {
-    /*align-items: center;*/
-    background: #000;
+    background: #2f3136;
     display: -ms-flexbox;
     display: flex;
-    /*justify-content: space-between;*/
     padding: 10px 20px;
+    border-radius: 4px;
 }
 .cl-header h2 {
     color: #fff;
     font-weight: 700;
     width: 300px;
     padding-top: 3px;
+   
 }
 .cl-header h2 > span {
     vertical-align: middle;
@@ -298,4 +302,18 @@ p {
 .timestamp {
     text-align: right;
     color: #dddddd;
+}
+
+.colorPreset {
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 20px;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 0;
+    position: relative;
+    width: 20px;
+    outline: 0;
 }
