@@ -29,9 +29,9 @@ p {
     }
 }
 
-@media (max-width: 440px) { 
+@media (min-width: 500px) { 
     .commands-list-container {
-        padding: 0;
+        padding: 40px !important;
     }
 }
 
@@ -43,7 +43,7 @@ p {
     font-family: NotoSans, sans-serif;
     margin: 0 auto;
     max-width: 1920px;
-    padding: 40px;
+    padding: 0;
     padding-top: 0;
 }
 .cl-header {
