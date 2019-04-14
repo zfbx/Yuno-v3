@@ -66,7 +66,7 @@
 
 /* main dimensions */
 .colorPicker .twod, .colorPicker .twod .bg {
-    width: 240px;
+    width: 230px;
     height: 240px;
 }
 .colorPicker .oned, .colorPicker .oned .bg {

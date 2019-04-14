@@ -29,6 +29,12 @@ p {
     }
 }
 
+@media (max-width: 440px) { 
+    .commands-list-container {
+        padding: 0;
+    }
+}
+
 #headerimg {
     border-radius: 4px;
 }
