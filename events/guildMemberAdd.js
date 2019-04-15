@@ -13,8 +13,8 @@ module.exports = (client, member) => {
                 .setAuthor("User joined")
                 .setColor(client.config.embedcolor)
                 .setImage(member.user.avatarURL({format: 'png', size: 2048}))
-                .addField("Id", member.user.tag)
-                .addField("Joined Discord", member.user.createdTimestamp, true)
+                .addField("Id", `${member.user.tag} (${member.user.id})`)
+                .addField("Joined Discord", new Date(member.user.createdTimestamp).toUTCString(), true)
                 .setFooter(new Date().toUTCString());
             logServer.send({embed});
         }
@@ -22,11 +22,11 @@ module.exports = (client, member) => {
     
     //welcome message
     var welcomeMsg = client.guildDB.get(member.guild.id, "welcomeMessage");
-    welcomeMsg = welcomeMsg.replace("{{user}}", member.user.tag); 
+    welcomeMsg = welcomeMsg.replace("{{user}}", member.user.id); 
     //TODO: add more placeholders
     if (welcomeMsg !== "") {
-        //member.guild.channels.get(client.guildDB.get(member.guild.id, "welcomeChannel"))
-        //.send(welcomeMsg) TODO: CAUSE ISSUE
+        member.guild.channels.get(client.guildDB.get(member.guild.id, "welcomeChannel"))
+        .send(welcomeMsg)
         //.catch(console.error);
     }
 
