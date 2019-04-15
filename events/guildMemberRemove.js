@@ -13,8 +13,8 @@ module.exports = (client, member) => {
                 .setAuthor("User left")
                 .setColor(client.config.embedcolor)
                 .setImage(member.user.avatarURL({format: 'png', size: 2048}))
-                .addField("Id", member.user.tag)
-                .addField("Joined Discord", member.user.createdTimestamp, true)
+                .addField("Id", `${member.user.tag} (${member.user.id})`)
+                .addField("Joined Discord", new Date(member.user.createdTimestamp).toUTCString(), true)
                 .setFooter(new Date().toUTCString());
             logServer.send({embed});
         }
