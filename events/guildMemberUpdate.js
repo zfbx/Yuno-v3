@@ -15,18 +15,33 @@ module.exports = (client, oldMember, newMember) => {
                 if (oldMember.roles.array().length > newMember.roles.array().length) { //role removed
                     addorremoved = "Role Removed";
                 }
-                var roles = newMember.roles.filter(function(i) {return oldMember.roles.array().indexOf(i) < 0;});
+                //var roles = newMember.roles.filter(function(i) {return oldMember.roles.array().indexOf(i) > 0;});
                 //var roles = newMember.roles.diff(oldMember.roles);
-                console.log(roles.values()[0]); //TODO: Something is broken in here and i'm not sure what
-                var role = newMember.guild.roles.get(roles.first());
-                console.log(role);
+                //console.log(roles.values()[0]); //TODO: Something is broken in here and i'm not sure what
+                //var role = newMember.guild.roles.get(roles.first());
+                //console.log(role);
                 const embed = new Discord.MessageEmbed()
                     .setAuthor(addorremoved)
                     .setColor(client.config.embedcolor)
                     .addField(newMember.user.tag, `(${newMember.id})`)
-                    .addField("Role", `${roles.name} (${roles.id})`)
                     .setFooter(new Date().toUTCString());
-                logServer.send({embed});
+                    if(addorremoved === "Role Added") {
+                        for (const role of newMember.roles.map(x => x.id)) {
+                            if (!oldMember.roles.has(role)) {
+                                embed.addField(`Role`, `${oldMember.guild.roles.get(role).name} (${newMember.guild.roles.get(role).id})`);
+                            }
+                        }
+                    } else {
+                        for (const role of oldMember.roles.map(x => x.id)) {
+                            if (!newMember.roles.has(role)) {
+                                embed.addField(`Role`, `${newMember.guild.roles.get(role).name} (${newMember.guild.roles.get(role).id})`);
+                            }
+                        }
+                    }
+                    
+                    
+                    //.addField("Role", `${roles.name} (${roles.id})`)
+                    logServer.send({embed});
 
             } else if (oldMember.nickname !== newMember.nickname) { // check for nickname change
                 var oldn = "**No Nickname**";
