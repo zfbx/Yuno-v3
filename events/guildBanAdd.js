@@ -1,4 +1,21 @@
+const Discord = require('discord.js');
+
 module.exports = (client, guild, user) => {
-    //guild.defaultChannel.send(`${user.username} was just banned!`);
-    client.log.info(`${user.username} was just banned from ${guild.name}`);
+
+    client.guildDB.ensure(member.guild.id, client.guildDBDefaults);
+    var logChannelId = client.guildDB.get(member.guild.id, "logChannel");
+    if(logChannelId) {
+        logServer = member.guild.channels.get(logChannelId);
+        if (logServer) {
+            const embed = new Discord.MessageEmbed()
+                .setAuthor("User Banned")
+                .setColor(client.config.embedcolor)
+                .setImage(member.user.avatarURL({format: 'png', size: 2048}))
+                .addField("Id", `${member.user.tag} (${member.user.id})`)
+                .setFooter(new Date().toUTCString());
+            logServer.send({embed});
+        }
+    }
+
+    client.log.info(`${user.tag} was just banned from ${guild.name}`);
 }
