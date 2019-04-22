@@ -22,12 +22,12 @@ module.exports = (client, member) => {
     
     //welcome message
     var welcomeMsg = client.guildDB.get(member.guild.id, "welcomeMessage");
-    welcomeMsg = welcomeMsg.replace("{{user}}", member.user.id); 
+    var welcomeChannel = client.guildDB.get(member.guild.id, "welcomeChannel");
+     
     //TODO: add more placeholders
-    if (welcomeMsg !== "") {
-        member.guild.channels.get(client.guildDB.get(member.guild.id, "welcomeChannel"))
-        .send(welcomeMsg)
-        //.catch(console.error);
+    if (welcomeMsg !== "" && welcomeChannel !== "") {
+        welcomeMsg = welcomeMsg.replace("{{user}}", member.user.id);
+        member.guild.channels.get(welcomeChannel).send(welcomeMsg)
     }
 
     //autorole
