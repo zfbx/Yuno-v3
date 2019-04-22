@@ -11,15 +11,19 @@ Meet Yuno, a discord bot built to be modular and easy to expand upon through Jav
 
 ### Features
 **Event Logging**
+
 create a private channel and type `.logchannel` for Yuno to use that channel to log all events that happen on the server like new members, deleted message, role changes, etc.
 
 **Auto Role**
+
 Give a specified role to new users automatically when they join using `.autorole RoleName`. very useful for sorting users into categories above the bots for example.
 
 **Twitch Live alerts**
+
 Want a certain twitch stream to alert in a channel when it's live with a preview, title and current game? Just type `.twitch TwitchChannelname` in the channel you want alerts and Yuno will monitor that for you!
 
 **Accept Terms for Role**
+
 If you want to protect your server more from bots or force people to read and accept rules before gaining access to another area you can set up a role with `.termsrole RoleName` and when the user types `.accept` they will be given the role set and their message will be deleted keeping the terms and conditions channel nice and clean for you.
 
 **For the rest of the features check out the [Command List](https://zfbx.github.io/Yuno/)**
