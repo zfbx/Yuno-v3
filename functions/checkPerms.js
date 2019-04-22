@@ -14,15 +14,17 @@ module.exports = (client, message, cmd) => {
             }
         }
     }
+
+    if(cmd.ownerOnly && !client.config.ownerid.includes(message.author.id))
+        return { run: false, msg: 'Only bot owners are allowed to run this command.'}; 
+
     if (client.config.ownerid.includes(message.author.id) ||
         message.member.hasPermission('ADMINISTRATOR') ||
         message.member.hasPermission(cmd.requires, true, true)) {
         if (message.guild.member(client.user).hasPermission(cmd.botPermissions, true)) {
-            if (cmd.nsfw) {
-                if(!message.channel.nsfw) {
-                    return { run: false, msg: 'I\'m sorry, This command is nsfw and not permitted in this channel.'};
-                }
-            }
+            if (cmd.nsfw && !message.channel.nsfw)
+                return { run: false, msg: 'I\'m sorry, This command is nsfw and not permitted in this channel.'};
+                
             return {run: true, msg: ''};
         } else {
             if (!message.guild.member(client.user).hasPermission('SEND_MESSAGES', true)) {
