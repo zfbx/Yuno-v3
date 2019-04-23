@@ -179,53 +179,53 @@ p {
     background: #009bbf;
 }
 
-.module-name.fun {
+.module-name.customreactions {
     background: rgba(0, 91, 211, .3);
     border: 1px solid #005bd3;
 }
 
-.fun,
-.fun.selected {
+.customreactions,
+.customreactions.selected {
     background: #005bd3;
 }
 
-.module-name.games {
+.module-name.fun {
     background: rgba(45, 41, 170, .3);
     border: 1px solid #2d29aa;
 }
 
-.games,
-.games.selected {
+.fun,
+.fun.selected {
     background: #2d29aa;
 }
 
-.module-name.help {
+.module-name.games {
     background: rgba(108, 33, 174, .3);
     border: 1px solid #6c21ae;
 }
 
-.help,
-.help.selected {
+.games,
+.games.selected {
     background: #6c21ae;
 }
 
-.module-name.math {
+.module-name.help {
     background: rgba(151, 45, 182, .3);
     border: 1px solid #972db6;
 }
 
-.math,
-.math.selected {
+.help,
+.help.selected {
     background: #972db6;
 }
 
-.module-name.music {
+.module-name.math {
     background: rgba(197, 37, 136, .3);
     border: 1px solid #c52588;
 }
 
-.music,
-.music.selected {
+.math,
+.math.selected {
     background: #c52588;
 }
 
