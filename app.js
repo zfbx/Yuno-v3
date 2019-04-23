@@ -23,7 +23,7 @@ client.twitchDB = new Enmap({
     cloneLevel: 'deep'  
 });
 client.userDB = new Enmap({ 
-    name: "guildDB",
+    name: "userDB",
     fetchAll: false,
     autoFetch: true,
     cloneLevel: 'deep' 
