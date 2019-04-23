@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
 
 exports.info = {
     name: 'acceptterms',
-    aliases: ['iaccept', 'accept', 'accepttermsandconditions'],
+    aliases: ['iaccept', 'accept', 'accepttermsandconditions', 'agree'],
     usage: ["acceptterms"],
     module: "Utility",
     nsfw: false,
