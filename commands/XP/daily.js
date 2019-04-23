@@ -3,6 +3,8 @@ const pkg = require('../../package.json');
 
 exports.run = async (client, message, args) => {
 
+    client.userDB.ensure(message.author.id, client.userDBDefaults);
+
     var date = new Date();
     var name = message.author.username;
     var day = (date.getMonth() + 1) + "-" + date.getDate();
