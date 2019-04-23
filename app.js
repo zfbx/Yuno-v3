@@ -22,6 +22,12 @@ client.twitchDB = new Enmap({
     autoFetch: true,
     cloneLevel: 'deep'  
 });
+client.userDB = new Enmap({ 
+    name: "guildDB",
+    fetchAll: false,
+    autoFetch: true,
+    cloneLevel: 'deep' 
+});
 
 client.guildDBDefaults = {	
     prefix: ".",
@@ -36,6 +42,19 @@ client.guildDBDefaults = {
     termsRole: "",
     welcomeChannel: "",
     welcomeMessage: "Say hello to {{user}}, everyone!"
+}
+
+client.userDBDefaults = {
+    username: "",
+    points: 0,
+    currency: 0,
+    rep: 0,
+    dailyReset: "",
+    repReset: "",
+    birthday: "",
+    firstSeen: "",
+    messageCount: 0,
+    commandCount: 0
 }
 
 client.config = require('./config.js');
@@ -64,11 +83,11 @@ function loadCommands(folder) {
 }
 
 loadCommands('Administration');
+loadCommands('CustomReactions');
 loadCommands('Fun');
 loadCommands('Games');
 loadCommands('Help');
 loadCommands('Math');
-loadCommands('Music');
 loadCommands('NSFW');
 loadCommands('Owner');
 loadCommands('Search');
