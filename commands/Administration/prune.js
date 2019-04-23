@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const time = require('../../functions/time');
 
 exports.run = async (client, message, args) => {
     
@@ -19,7 +20,7 @@ exports.run = async (client, message, args) => {
                         .setAuthor("Bulk Message Deletion")
                         .setColor(client.config.embedcolor)
                         .addField("Deleted By", `${message.author.tag} (${message.author.id})`)
-                        .setFooter(Date.now());
+                        .setFooter(time.stamp());
                     logServer.send({embed});
                 }
             }

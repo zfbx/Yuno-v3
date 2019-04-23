@@ -11,12 +11,6 @@ module.exports = {
     sinceMs: function(past) {
         var msg = "";
         var seconds = Math.round(past/1000.0);
-        //var seconds = past;
-        /*
-        var current = Math.round(new Date().getTime()/1000.0);
-        console.log('Current: '+current);
-        console.log('Past: '+past);
-        var seconds = Math.floor((current - past) / 1000);*/
         msg += calcString(seconds, 31536000);
         seconds = seconds % 31536000;
         msg += calcString(seconds, 2592000);
@@ -34,15 +28,25 @@ module.exports = {
 
     /**
      * Returns a fancy timestamp
+     * @param {datetime} date - DateTime object to get timestamp of
      * @return {string} Friendly timestamp
      */
-    stamp: function() {
-        var date = new Date();
+    stamp: function(date = new Date()) {
         var ds = months[date.getMonth()];
         ds += th(date.getDate());
         ds += date.getFullYear();
+        var m = "am"
+        var hours = date.getHours();
         var minutes = `0${date.getMinutes()}`;
-        ds += ` ${date.getHours()}:${minutes.slice(-2)}`;
+        var seconds = `0${date.getSeconds()}`;
+        if (hours >= 12) {
+            hours = hours - 12;
+            m = "pm";
+        }
+        if (hours == 0)
+            hours = 12;
+
+        ds += ` | ${hours}:${minutes.slice(-2)}:${seconds.slice(-2)}${m}`;
         return ds;
     }
 };
@@ -50,7 +54,6 @@ module.exports = {
 function calcString(seconds, period) {
     var reply = "";
     var interval = Math.floor(seconds / period);
-    //console.log(interval);
     if (interval >= 1) {
         reply += `${interval} ${type[period]}`;
         if (interval > 1) {

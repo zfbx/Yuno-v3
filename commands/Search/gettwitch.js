@@ -12,8 +12,6 @@ exports.run = async (client, message, args) => {
             if (json.stream == null)
                 return message.channel.send(`Stream either is offline or doesn't exist`);
             ch = json.stream;
-            //ch.created_at
-            //ch.channel.updated_at
             const embed = new Discord.MessageEmbed()
                 .setAuthor(ch.channel.status, null, ch.channel.url)
                 .setColor(client.config.embedcolor)

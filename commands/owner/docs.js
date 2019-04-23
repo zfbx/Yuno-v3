@@ -1,7 +1,7 @@
 const fs = require('fs');
+const time = require('../../functions/time');
      
 exports.run = async (client, message, args) => {
-    //if (message.author.id != client.config.ownerid) return;
     var now = Date.now();
     message.channel.send('Generating Documents.');
     client.log.info("Generating Docs..");
@@ -36,9 +36,9 @@ exports.run = async (client, message, args) => {
         client.log.debug(`Added Command #${num}`);
         num++;
     });
-    client.log.info(`Added ${num - 1} commands.`); //originally for logging for loop adds extra
+    client.log.info(`Added ${num - 1} commands.`);
     client.log.debug("Saving New Command List..");
-    template = template.replace(/{{COMMANDS}}/, cl).replace(/{{timestamp}}/, now);
+    template = template.replace(/{{COMMANDS}}/, cl).replace(/{{timestamp}}/, time.stamp());
     fs.writeFileSync('./docs/index.html', template, function (err) {
         if (err) throw err;
     });

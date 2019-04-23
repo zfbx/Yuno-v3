@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const time = require('../../functions/time');
 
 module.exports = (client, member) => {
     client.log.info(`${member.user.tag} (${member.id}) has joined ${member.guild.name} (${member.guild.id})`);
@@ -14,8 +15,8 @@ module.exports = (client, member) => {
                 .setColor(client.config.embedcolor)
                 .setImage(member.user.avatarURL({format: 'png', size: 2048}))
                 .addField("Id", `${member.user.tag} (${member.user.id})`)
-                .addField("Joined Discord", new Date(member.user.createdTimestamp).toUTCString(), true)
-                .setFooter(new Date().toUTCString());
+                .addField("Joined Discord", time.stamp(new Date(member.user.createdTimestamp)), true)
+                .setFooter(time.stamp());
             logServer.send({embed});
         }
     }

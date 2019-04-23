@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const time = require('../../functions/time');
 
 module.exports = (client, guild, user) => {
 
@@ -12,7 +13,7 @@ module.exports = (client, guild, user) => {
                 .setColor(client.config.embedcolor)
                 .setImage(user.avatarURL({format: 'png', size: 2048}))
                 .addField("Id", `${user.tag} (${user.id})`)
-                .setFooter(new Date().toUTCString());
+                .setFooter(time.stamp());
             logServer.send({embed});
         }
     }

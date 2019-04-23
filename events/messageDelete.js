@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const time = require('../../functions/time');
 
 module.exports = (client, message) => {
     client.guildDB.ensure(message.guild.id, client.guildDBDefaults);
@@ -26,7 +27,7 @@ module.exports = (client, message) => {
                 //.addField("Message By:", `${message.author.tag} (${message.author.id})`)
                 .setDescription(`${message.author.tag} (${message.author.id})`)
                 .addField(`Message: (${message.id})`, msg)
-                .setFooter(new Date().toUTCString());
+                .setFooter(time.stamp());
 
             if (attach !== "") {
                 embed.addField("Attachments:", attach);

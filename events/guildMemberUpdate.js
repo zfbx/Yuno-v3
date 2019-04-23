@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const time = require('../../functions/time');
 
 Array.prototype.diff = function(a) { // Not seeming to work with discord.js objects as the "ref diff isn't a function"
     return this.filter(function(i) {return a.indexOf(i) < 0;});
@@ -24,7 +25,7 @@ module.exports = (client, oldMember, newMember) => {
                     .setAuthor(addorremoved)
                     .setColor(client.config.embedcolor)
                     .addField(newMember.user.tag, `(${newMember.id})`)
-                    .setFooter(new Date().toUTCString());
+                    .setFooter(time.stamp());
                     if(addorremoved === "Role Added") {
                         for (const role of newMember.roles.map(x => x.id)) {
                             if (!oldMember.roles.has(role)) {
@@ -61,14 +62,14 @@ module.exports = (client, oldMember, newMember) => {
                     .addField(newMember.user.tag, `(${newMember.id})`)
                     .addField("Old: ", oldn)
                     .addField("New: ", newn)
-                    .setFooter(new Date().toUTCString());
+                    .setFooter(time.stamp());
                 logServer.send({embed});
             } else { // idk what changed, log for debugging
                 const embed = new Discord.MessageEmbed()
                     .setAuthor("Something changed for this user but I'm not sure what.")
                     .setColor(client.config.embedcolor)
                     .addField(newMember.user.tag, `(${newMember.id})`)
-                    .setFooter(new Date().toUTCString());
+                    .setFooter(time.stamp());
                 logServer.send({embed});
             }
         }

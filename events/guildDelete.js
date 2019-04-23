@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const time = require('../../functions/time');
 
 module.exports = (client, guild) => {
     client.users.fetch(client.config.ownerid[0]).then( user => {
@@ -9,7 +10,7 @@ module.exports = (client, guild) => {
         .addField('ID', `${guild.id}`)
         .addField('Owner', `${guild.owner.user.tag}`)
         .addField('Members', `${guild.memberCount}`)
-        .setFooter(new Date().toUTCString());
+        .setFooter(time.stamp());
         user.send({ embed }).catch(console.error);
     });
     client.log.info(`I have been from the guild: ${guild.name}, owned by: ${guild.owner.user.tag}, with ${guild.memberCount} members.`);
