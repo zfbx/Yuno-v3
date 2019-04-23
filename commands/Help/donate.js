@@ -1,7 +1,14 @@
+var msg = `A lot of work goes into the projects I make, Yuno esspecially, and if you would really help support this as well as more work like this you can become a **Patron** (<https://www.patreon.com/zfbx>) or send a donation through **Paypal** (<https://www.paypal.me/zfbx>)\nThank you so much for your support in regardless, even if just by using Yuno yourself ♥`;
+
 
 exports.run = async (client, message, args) => {
-    message.author.send(`A lot of work goes into projects I made, including Yuno. If you really like my work and would like to help support more work like this you can become a **Patron** at \n<https://www.patreon.com/zfbx> \nor even send a single donation through **Paypal** at \n<https://www.paypal.me/zfbx> \n\nThank you so much for your support in any way you do, even if it's just through using Yuno yourself ♥`);
-    message.react('❤');
+    message.author.send(msg).then(message => {
+            return message.react('❤');
+        })
+        .catch(e => {
+            return message.channel.send(msg);
+        });
+    
 };
 
 exports.info = {
