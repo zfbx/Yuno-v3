@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const time = require('../../functions/time');
+const time = require('../functions/time');
 
 Array.prototype.diff = function(a) { // Not seeming to work with discord.js objects as the "ref diff isn't a function"
     return this.filter(function(i) {return a.indexOf(i) < 0;});

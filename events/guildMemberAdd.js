@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const time = require('../../functions/time');
+const time = require('../functions/time');
 
 module.exports = (client, member) => {
     client.log.info(`${member.user.tag} (${member.id}) has joined ${member.guild.name} (${member.guild.id})`);

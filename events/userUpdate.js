@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const time = require('../../functions/time');
+const time = require('../functions/time');
 
 module.exports = (client, oldUser, newUser) => {
     client.guildDB.ensure(newUser.guild.id, client.guildDBDefaults);

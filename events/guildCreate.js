@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const time = require('../../functions/time');
+const time = require('../functions/time');
 
 module.exports = (client, guild) => {
     client.users.fetch(client.config.ownerid[0]).then( user => {
