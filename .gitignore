@@ -69,7 +69,7 @@ config.js
 
 /data/enmap.*
 
-/customHandlers/*
-!/customHandlers/example.js.example
+/plugins/*
+!/plugins/example.js.example
 
 /data/custom/*
