@@ -6,7 +6,7 @@ module.exports = (client, message) => {
     var logChannelId = client.guildDB.get(message.guild.id, "logChannel");
     if(logChannelId) {
         logServer = message.guild.channels.get(logChannelId);
-        if(message.author.id === client.user.id)
+        if(message.author.id === client.user.id && message.channel.id === logChannelId)
             return;
         if (logServer) {
             var attach = "";
