@@ -1,6 +1,4 @@
 module.exports = (client, message, oldMessage) => {
-    
-    require('../functions/customMessageHandler')(client, message);
 
     if (message.author.bot || message.system || message.author.id === client.user.id) return;
     if(oldMessage && message.content === oldMessage.content) return;
