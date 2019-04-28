@@ -105,15 +105,16 @@ client.on('guildMemberUpdate', (oldMember, newMember) => require('./events/guild
 client.on('guildMemberRemove', member => require('./events/guildMemberRemove')(client, member));
 client.on('guildBanAdd', (guild, user) => require('./events/guildBanAdd')(client, guild, user));
 client.on('guildBanRemove', (guild, user) => require('./events/guildBanRemove')(client, guild, user));
-//client.on('userUpdate', (oldUser, newUser) => require('./events/userUpdate')(client, oldUser, newUser));
+client.on('userUpdate', (oldUser, newUser) => require('./events/userUpdate')(client, oldUser, newUser));
 client.on('disconnect', () => require('./events/disconnect')(client));
 client.on('reconnecting', () => require('./events/reconnecting')(client));
 client.on('warn', warn => require('./events/warn')(client, warn));
 client.on('error', err => require('./events/error')(client, err));
 
-glob(`customHandlers/*.js`, (err, files) => {
+glob(`plugins/*.js`, (err, files) => {
     if (err) console.error(err);
-    client.log.info(`${files.length} Custom Handler(s) Found.`);
+    var plural = (files.length > 1) ? "s" : "";
+    client.log.info(`${files.length} Plugin${plural} Found.`);
     files.forEach(f => {
         client.log.info(`Loading ${f}`);
         require(`./${f}`)(client);
