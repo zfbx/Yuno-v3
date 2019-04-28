@@ -68,3 +68,8 @@ data/temp/*
 config.js
 
 /data/enmap.*
+
+/customHandlers/*
+!/customHandlers/example.js.example
+
+/data/custom/*
