@@ -1,0 +1,12 @@
+module.exports = (client) => {
+
+    client.on('message', message => { //extra message handler
+
+        // do something special if the guild ID matches
+        if (message.guild.id === "354143016996569089") {
+            client.log.info('Someone messaged in the Yuno server :D');
+        }
+
+    });
+
+}

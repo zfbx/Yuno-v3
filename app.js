@@ -111,4 +111,13 @@ client.on('reconnecting', () => require('./events/reconnecting')(client));
 client.on('warn', warn => require('./events/warn')(client, warn));
 client.on('error', err => require('./events/error')(client, err));
 
+glob(`customHandlers/*.js`, (err, files) => {
+    if (err) console.error(err);
+    client.log.info(`${files.length} Custom Handler(s) Found.`);
+    files.forEach(f => {
+        client.log.info(`Loading ${f}`);
+        require(`./${f}`)(client);
+    });
+});
+
 client.login(client.config.token);
