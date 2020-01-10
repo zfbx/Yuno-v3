@@ -1,3 +1,5 @@
+# I'm archiving this project in favor of my new [Discord Bot Template 2](https://github.com/zfbx/Discord-Bot-Template-2) as this project has some issues and is quite old at this point. The new project makes use of a framework that handles a lot of stuff better than I did in this project. please check it out.
+
 [![yuno](https://raw.githubusercontent.com/zfbx/Yuno/master/docs/yunoheader.png)](https://zfbx.github.io/Yuno/)
 
  * Default Prefix: `.` or `@Yuno#4429`
