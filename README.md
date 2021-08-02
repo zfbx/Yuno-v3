@@ -1,23 +1,19 @@
+![Version](https://img.shields.io/badge/Version-5.0.0-%23ff69b4?style=for-the-badge)
+[![Donate on PayPal](https://img.shields.io/badge/Donate-PayPal-%2300457C?style=for-the-badge&logo=paypal)](https://paypal.me/zfbx)
+[![Sub on Patreon](https://img.shields.io/badge/Support-Patreon-%23FF424D?style=for-the-badge&logo=patreon)](https://www.patreon.com/zfbx)
+[![Discord](https://img.shields.io/badge/Join-Discord-%235865F2?style=for-the-badge&logo=Discord)](https://discord.gg/Td7a6j4)
+[![GNU GPLv3 License](https://img.shields.io/badge/License-GNU_GPLv3-green?style=for-the-badge&logo=opensourceinitiative)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+
 [![yuno](https://raw.githubusercontent.com/zfbx/Yuno/master/docs/yunoheader.png)](https://zfbx.github.io/Yuno/)
-
-![Version](https://img.shields.io/badge/Version-5.0.0-%23ff69b4?style=flat-square)
-[![Donate on PayPal](https://img.shields.io/badge/Donate-PayPal-%2300457C?style=flat-square&logo=paypal)](https://paypal.me/zfbx)
-[![Sub on Patreon](https://img.shields.io/badge/Support-Patreon-%23FF424D?style=flat-square&logo=patreon)](https://www.patreon.com/zfbx)
-[![Discord](https://img.shields.io/badge/Join-Discord-%235865F2?style=flat-square&logo=Discord)](https://discord.gg/Td7a6j4)
-
 
 ## About
 She's back! Well, she was never really gone but I did make version 4 of Yuno closed source and I've decided it was time for a rewrite with all the changes coming to the Discord API so here we are with a fresh start!
-
-### Features
-WIP
 
 ## Who Is Yuno?
 Yuno (Yuno Gasai) is base off a character from an Anime called Mirai Nikki (Future Diary). Honestly I just really like the character and thought she'd be a great theme for the discord bot :)
 
 ## License
 
-[![GNU GPLv3 License](https://img.shields.io/badge/License-GNU_GPLv3-green?style=flat-square&logo=opensourceinitiative)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 All code in this repo falls under GNU GPLv3 License unless otherwise stated. If you're not sure what that means, this should clear up what rights and permissions you get if you want to use this source yourself:
 
 | **Permissions**   | **Conditions**                  | **Limitations** |
