@@ -38,7 +38,7 @@
     "enmap": "^4.8.4",
     "glob": "^7.1.3",
     "logger": "github:zfbx/logger",
-    "mathjs": "^5.9.0",
+    "mathjs": "^7.5.1",
     "node-fetch": "^2.3.0"
   },
   "optionalDependencies": {
